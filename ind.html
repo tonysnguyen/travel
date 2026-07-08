@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koh Phangan Muay Thai — Train Where Champions Are Made</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & TOKENS ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+:root{
+  --navy:#0d2240;
+  --blue:#0066cc;
+  --orange:#f05a28;
+  --teal:#00a896;
+  --gold:#f59e0b;
+  --white:#fff;
+  --gray-50:#f8fafc;
+  --gray-100:#f1f5f9;
+  --gray-200:#e2e8f0;
+  --gray-300:#cbd5e1;
+  --gray-500:#64748b;
+  --gray-700:#334155;
+  --gray-900:#0f172a;
+  --r-sm:8px;
+  --r-md:12px;
+  --r-lg:16px;
+  --r-xl:24px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:0 4px 16px rgba(0,0,0,.09);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.14);
+  --trans:all .2s cubic-bezier(.4,0,.2,1);
+}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:var(--gray-900);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* ── NAV ── */
+#top-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(226,232,240,0.8);
+  box-shadow:0 1px 0 rgba(0,0,0,.04);
+  transition:var(--trans);
+}
+#top-nav.scrolled{
+  background:rgba(255,255,255,0.97);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 28px;max-width:1140px;margin:0 auto;transition:height .2s}
+#top-nav.scrolled .nav-inner{height:58px}
+.nav-logo{font-size:.95rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;display:flex;align-items:center;gap:9px;text-decoration:none}
+.nav-logo:hover{text-decoration:none;color:var(--navy)}
+.nav-logo-mark{width:30px;height:30px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.1}
+.nav-logo-sub{font-size:.62rem;font-weight:600;color:var(--gray-500);letter-spacing:.06em;text-transform:uppercase}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links a{font-size:.83rem;font-weight:600;color:var(--gray-700);padding:6px 12px;border-radius:6px;transition:var(--trans);text-decoration:none;position:relative}
+.nav-links a:hover{background:var(--gray-100);color:var(--navy);text-decoration:none}
+.nav-links a.active{color:var(--blue)}
+.nav-links a.active::after{content:'';position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);width:4px;height:4px;background:var(--blue);border-radius:50%}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-cta{background:var(--orange);color:#fff;padding:8px 18px;border-radius:8px;font-size:.83rem;font-weight:700;white-space:nowrap;transition:var(--trans);text-decoration:none;box-shadow:0 2px 8px rgba(240,90,40,.28)}
+.nav-cta:hover{background:#d94f22;color:#fff;text-decoration:none;box-shadow:0 4px 14px rgba(240,90,40,.38);transform:translateY(-1px)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;border-radius:6px}
+.nav-toggle:hover{background:var(--gray-100)}
+.nav-toggle span{display:block;width:20px;height:2px;background:var(--gray-700);border-radius:2px;transition:var(--trans)}
+.nav-mobile{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--gray-200);padding:8px 16px 16px;gap:2px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:.9rem;font-weight:600;color:var(--gray-700);padding:10px 14px;border-radius:var(--r-sm);text-decoration:none;display:flex;align-items:center;gap:8px;transition:var(--trans)}
+.nav-mobile a:hover{background:var(--gray-50);color:var(--navy)}
+.nav-mobile-cta{margin-top:8px;background:var(--orange)!important;color:#fff!important;justify-content:center;border-radius:var(--r-sm)!important}
+.nav-mobile-cta:hover{background:#d94f22!important}
+@media(max-width:768px){.nav-toggle{display:flex}.nav-links,.nav-cta{display:none}}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;
+  background:linear-gradient(160deg,#060f1e 0%,#0a1e38 40%,#091a2f 100%);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:88px 24px 60px;
+  position:relative;overflow:hidden;
+}
+#particle-canvas{position:absolute;inset:0;z-index:0;opacity:.4;pointer-events:none}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:960px;display:grid;grid-template-columns:1fr;align-items:center;gap:0;text-align:center}
+.hero-text{order:1}
+.hero-globe{order:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:20px}
+.hero-eyebrow-dot{width:5px;height:5px;background:#00d4aa;border-radius:50%;flex-shrink:0;animation:pulse-dot 2s ease infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-title{font-family:'DM Serif Display',serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:400;color:#fff;line-height:1.05;letter-spacing:-.01em;margin-bottom:8px}
+.hero-title .accent{color:#4db8ff;font-style:italic}
+.hero-sub-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(.9rem,2vw,1rem);color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 28px;line-height:1.7;font-weight:400}
+.hero-stats{display:flex;justify-content:center;gap:0;margin-bottom:32px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);overflow:hidden;max-width:440px;margin-left:auto;margin-right:auto}
+.hero-stat{flex:1;padding:14px 12px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+.hero-stat:last-child{border-right:none}
+.hero-stat-num{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:#fff;letter-spacing:-.03em;display:block;line-height:1;text-shadow:0 0 20px rgba(77,184,255,0.4)}
+.hero-stat-label{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:.06em;text-transform:uppercase;margin-top:3px;display:block}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.btn-hero-primary{display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:700;padding:13px 26px;border-radius:50px;background:var(--orange);color:#fff;border:none;cursor:pointer;transition:var(--trans);text-decoration:none;box-shadow:0 4px 16px rgba(240,90,40,.35)}
+.btn-hero-primary:hover{background:#d94f22;color:#fff;text-decoration:none;transform:translateY(-2px);box-shadow:0 8px 24px rgba(240,90,40,.45)}
+.btn-hero-secondary{display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:600;padding:13px 26px;border-radius:50px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.2);cursor:pointer;transition:var(--trans);text-decoration:none}
+.btn-hero-secondary:hover{background:rgba(255,255,255,.18);color:#fff;text-decoration:none;transform:translateY(-2px)}
+
+/* map */
+#map-wrap{position:relative;width:100%;max-width:900px;margin:0 auto 16px}
+#map-canvas{width:100%;height:auto;display:block;border-radius:var(--r-xl)}
+/* ── GLOBE STOP INFO strip between nav arrows ── */
+#map-tooltip{flex:1;text-align:center;padding:2px 8px;min-width:0}
+.tt-city{font-size:.73rem;font-weight:800;color:rgba(255,255,255,.92);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt-sub{display:flex;justify-content:center;gap:8px;margin-top:3px;flex-wrap:wrap}
+.tt-transport{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.5)}
+.tt-duration{font-size:.62rem;font-weight:700;color:rgba(0,200,255,.82)}
+
+/* leg chips */
+.leg-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:18px}
+.leg-chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.38);font-size:.7rem;font-weight:600;padding:5px 12px;border-radius:50px;transition:all .4s ease;letter-spacing:.02em}
+.leg-chip.active{background:rgba(0,212,170,.15);border-color:rgba(0,212,170,.45);color:#00d4aa}
+
+/* replay */
+.replay-btn{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2);border-radius:50px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:600;padding:10px 22px;cursor:pointer;transition:var(--trans)}
+.replay-btn:hover{background:rgba(255,255,255,.18);color:#fff}
+
+/* flash overlay */
+#flash-overlay{position:fixed;inset:0;pointer-events:none;background:rgba(255,107,40,.1);opacity:0;transition:opacity .3s;z-index:999}
+
+/* ── JUMP NAV ── */
+#jump-nav{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:64px;z-index:90;transition:top .2s}
+#top-nav.scrolled ~ #jump-nav,body.nav-scrolled #jump-nav{top:58px}
+.jump-nav-inner{display:flex;max-width:1140px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.jump-nav-inner::-webkit-scrollbar{display:none}
+.jump-card{flex:1;min-width:130px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:13px 12px;border-right:1px solid var(--gray-100);border-bottom:2px solid transparent;border:1px solid rgba(255,255,255,.12);cursor:pointer;text-decoration:none;transition:var(--trans);color:var(--gray-500);text-align:center}
+.jump-card:last-child{border-right:none}
+.jump-card:hover{background:var(--gray-50);color:var(--navy);text-decoration:none;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.jump-card-icon{font-size:1.6rem;margin-bottom:2px}
+.jump-card-title{font-size:.78rem;font-weight:700;color:inherit;letter-spacing:.01em}
+.jump-card-sub{font-size:.67rem;color:var(--gray-500);margin-top:1px}
+.jump-card.gym:hover{border-bottom-color:var(--orange);color:var(--orange)}
+.jump-card.gym:hover .jump-card-sub{color:rgba(240,90,40,.6)}
+.jump-card.hotel:hover{border-bottom-color:var(--blue);color:var(--blue)}
+.jump-card.hotel:hover .jump-card-sub{color:rgba(0,102,204,.6)}
+.jump-card.journey:hover{border-bottom-color:var(--teal);color:var(--teal)}
+.jump-card.journey:hover .jump-card-sub{color:rgba(0,168,150,.6)}
+.jump-card.prep:hover{border-bottom-color:#f59e0b;color:#f59e0b}
+.jump-card.prep:hover .jump-card-sub{color:rgba(124,58,237,.6)}
+
+/* ── SECTIONS ── */
+.section{padding:88px 0}
+.section-alt{background:var(--gray-50)}
+.section-header{margin-bottom:48px}
+.section-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section-eyebrow::before{content:'';display:inline-block;width:20px;height:2px;background:linear-gradient(to right,currentColor,transparent);border-radius:1px}
+.section-eyebrow.blue{color:var(--blue)}
+.section-eyebrow.teal{color:var(--teal)}
+.section-eyebrow.purple{color:#f59e0b}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4.5vw,2.8rem);font-weight:400;color:var(--navy);letter-spacing:-.01em;line-height:1.15;margin-bottom:14px}
+.section-desc{font-size:.95rem;color:var(--gray-500);max-width:520px;line-height:1.75}
+
+/* ── VISUAL BANNER (gym/hotel top) ── */
+.section-banner{
+  border-radius:var(--r-xl);
+  margin-bottom:40px;
+  overflow:hidden;
+  position:relative;
+  min-height:260px;
+  display:flex;
+  align-items:flex-end;
+  padding:36px 40px;
+}
+.section-banner-gym{background:linear-gradient(135deg,rgba(26,10,2,0.88) 0%,rgba(61,21,8,0.85) 35%,rgba(122,31,0,0.82) 65%,rgba(192,57,43,0.78) 100%),url('https://rittisakmuaythai.com/wp-content/uploads/2024/07/DSC04717-1024x1024.jpg') center/cover no-repeat}
+.section-banner-hotel{background:linear-gradient(135deg,rgba(4,29,53,0.87) 0%,rgba(7,58,99,0.84) 40%,rgba(9,103,144,0.81) 70%,rgba(0,130,120,0.85) 85%),url('https://images.unsplash.com/photo-1704907867940-8dbf5b630328?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat}
+.section-banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.section-banner-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px}
+.section-banner-title{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:400;color:#fff;line-height:1.2;text-shadow:0 2px 20px rgba(0,0,0,0.3)}
+.section-banner-sub{font-size:.85rem;color:rgba(255,255,255,.5);margin-top:6px;max-width:320px}
+.section-banner-badge{position:absolute;top:24px;right:28px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:6px 14px;font-size:.72rem;font-weight:700;color:#fff}
+
+/* ── STAT BAR ── */
+.stat-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--gray-200);border-radius:var(--r-lg);overflow:hidden;margin-bottom:36px}
+.stat-item{background:#fff;padding:20px 16px;text-align:center;border-right:1px solid var(--gray-200);position:relative}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:1.7rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;display:block;line-height:1.1}
+.stat-label{font-size:.66rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.07em;margin-top:5px;display:block}
+@media(max-width:640px){.stat-bar{grid-template-columns:repeat(2,1fr)}.stat-item:nth-child(2){border-right:none}.stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid var(--gray-200)}}
+
+/* ── CARDS ── */
+.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:768px){.cards-grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--gray-200);border-radius:28px;padding:28px;transition:var(--trans);box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),0 1px 3px rgba(0,0,0,.07)}
+.card:hover{box-shadow:var(--shadow-md);border-color:var(--gray-300);transform:translateY(-2px)}
+.card-icon{font-size:1.4rem;margin-bottom:14px;display:block}
+.card-label{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:8px}
+.card-title{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.3}
+.card-body{font-size:.87rem;color:var(--gray-500);line-height:1.75}
+/* ── PHOTO CARD BACKGROUNDS ── */
+.card-gym-photo{background:linear-gradient(rgba(255,255,255,0.84),rgba(255,255,255,0.84)),url('https://rittisakmuaythai.com/wp-content/uploads/2024/05/2024_0328_01273600-1024x1024.jpg') center/cover no-repeat!important;border-top:3px solid var(--orange)}
+.card-hotel-photo{background:linear-gradient(rgba(255,255,255,0.84),rgba(255,255,255,0.84)),url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1000&q=70&auto=format&fit=crop') center/cover no-repeat!important;border-top:3px solid var(--teal)}
+.card-gym-photo:hover{background:linear-gradient(rgba(255,255,255,0.78),rgba(255,255,255,0.78)),url('https://rittisakmuaythai.com/wp-content/uploads/2024/05/2024_0328_01273600-1024x1024.jpg') center/cover no-repeat!important;box-shadow:var(--shadow-md);border-color:var(--gray-300);transform:translateY(-2px)}
+.card-hotel-photo:hover{background:linear-gradient(rgba(255,255,255,0.78),rgba(255,255,255,0.78)),url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1000&q=70&auto=format&fit=crop') center/cover no-repeat!important;box-shadow:var(--shadow-md);border-color:var(--gray-300);transform:translateY(-2px)}
+.card-location-photo{background:linear-gradient(rgba(255,255,255,0.84),rgba(255,255,255,0.84)),url('https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=1000&q=80&auto=format&fit=crop') center 60%/cover no-repeat!important;border-top:3px solid var(--orange)}
+.card-location-photo:hover{background:linear-gradient(rgba(255,255,255,0.78),rgba(255,255,255,0.78)),url('https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=1000&q=80&auto=format&fit=crop') center 60%/cover no-repeat!important;box-shadow:var(--shadow-md);border-color:var(--gray-300);transform:translateY(-2px)}
+
+
+.card-featured{grid-column:1/-1;background:linear-gradient(rgba(13,34,64,0.86),rgba(13,34,64,0.86)),url('https://i0.wp.com/rittisakmuaythai.com/wp-content/uploads/2024/07/DSC04717.jpg?w=2048&ssl=1') center 15%/cover no-repeat;color:#fff;border-color:var(--navy);display:flex;gap:24px;align-items:flex-start}
+.card-featured:hover{box-shadow:0 16px 48px rgba(13,34,64,.3);transform:translateY(-2px)}
+.card-featured .card-label{color:rgba(255,255,255,.4)}
+.card-featured .card-title{color:#fff;font-size:1.3rem}
+.card-featured .card-body{color:rgba(255,255,255,.65)}
+.feat-icon{flex-shrink:0;width:64px;height:64px;background:var(--orange);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;font-size:1.7rem}
+@media(max-width:600px){.card-featured{flex-direction:column;gap:16px}}
+
+/* badges */
+.badge{display:inline-block;font-size:.67rem;font-weight:700;padding:3px 10px;border-radius:50px;margin:3px 3px 0 0;letter-spacing:.02em}
+.badge-gold{background:#fef3c7;color:#92400e}
+.badge-blue{background:#e8f2ff;color:#0066cc}
+.badge-orange{background:#fff3ee;color:#c04a1a}
+.badge-green{background:#d1fae5;color:#065f46}
+.badge-teal{background:#ccf7f1;color:#0d7363}
+
+/* contact bar */
+.contact-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r-sm);padding:14px 16px;margin-top:16px}
+.contact-item{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--gray-700);font-weight:500}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:700;padding:12px 22px;border-radius:50px;transition:var(--trans);text-decoration:none;border:none;cursor:pointer;letter-spacing:.01em}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 2px 8px rgba(240,90,40,.25)}
+.btn-orange:hover{background:#d94f22;color:#fff;text-decoration:none;transform:translateY(-2px);box-shadow:0 6px 20px rgba(240,90,40,.35)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 2px 8px rgba(13,34,64,.2)}
+.btn-navy:hover{background:#1a3a5c;color:#fff;text-decoration:none;transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,34,64,.3)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--gray-300)}
+.btn-outline:hover{background:var(--gray-50);color:var(--navy);text-decoration:none;border-color:var(--gray-400)}
+
+/* amenity grid */
+.amenity-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.amenity-item{font-size:.8rem;color:var(--gray-700);padding:8px 10px;background:var(--gray-50);border-radius:var(--r-sm);border:1px solid var(--gray-200);font-weight:500;display:flex;align-items:center;gap:6px}
+
+/* ── JOURNEY TIMELINE ── */
+.timeline{position:relative;display:flex;flex-direction:column;gap:0}
+.timeline::before{content:'';position:absolute;left:20px;top:44px;bottom:44px;width:2px;background:linear-gradient(to bottom,var(--blue),var(--teal));z-index:0}
+.timeline-item{position:relative;padding:0 0 20px 60px}
+.timeline-item:last-child{padding-bottom:0}
+.tl-step{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;z-index:1;transition:var(--trans)}
+.tl-step-plane{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff}
+.tl-step-ferry{background:var(--teal);color:#fff}
+.tl-step-taxi{background:var(--gold);color:#fff}
+.tl-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-xl);padding:22px 26px;transition:var(--trans)}
+.tl-card:hover{box-shadow:var(--shadow-md);border-color:var(--gray-300)}
+.tl-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tl-badge{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:50px}
+.tl-plane{background:#e8f2ff;color:var(--blue)}
+.tl-ferry{background:#d1fae5;color:#065f46}
+.tl-taxi{background:#fef3c7;color:#92400e}
+.tl-duration{font-size:.72rem;font-weight:700;color:var(--gray-500);background:var(--gray-100);padding:3px 10px;border-radius:50px}
+.tl-route{font-size:1.1rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:3px}
+.tl-meta{font-size:.77rem;color:var(--gray-500);margin-bottom:10px}
+.tl-desc{font-size:.87rem;color:var(--gray-700);line-height:1.7}
+.tl-tip{margin-top:10px;font-size:.78rem;color:var(--teal);font-weight:600;display:flex;align-items:center;gap:6px}
+.tl-tip::before{content:'💡';font-size:.85rem}
+@media(max-width:600px){.timeline::before{left:17px}.tl-step{width:34px;height:34px;font-size:.75rem}.timeline-item{padding-left:50px}}
+
+/* ── CHECKLIST ── */
+.progress-wrap{margin-bottom:28px}
+.progress-label-row{display:flex;justify-content:space-between;font-size:.82rem;font-weight:700;color:var(--gray-700);margin-bottom:10px}
+.progress-pct{color:var(--blue)}
+.progress-bar{height:6px;background:var(--gray-200);border-radius:50px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--teal));border-radius:50px;width:0%;transition:width .5s cubic-bezier(.4,0,.2,1)}
+.accordion-item{margin-bottom:8px}
+.accordion-header{width:100%;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:14px 18px;cursor:pointer;transition:var(--trans);text-align:left}
+.accordion-header:hover{border-color:var(--gray-300);box-shadow:var(--shadow-sm)}
+.accordion-header.open{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-color:var(--gray-100)}
+.acc-emoji{font-size:1rem;flex-shrink:0}
+.acc-title{flex:1;font-size:.9rem;font-weight:700;color:var(--navy)}
+.acc-count{font-size:.7rem;font-weight:700;color:var(--gray-500);background:var(--gray-100);padding:3px 10px;border-radius:50px;white-space:nowrap;transition:var(--trans)}
+.acc-count.done{background:#d1fae5;color:#065f46}
+.acc-chevron{font-size:.6rem;color:var(--gray-300);transition:transform .25s ease;flex-shrink:0}
+.accordion-header.open .acc-chevron{transform:rotate(180deg)}
+.accordion-body{background:#fff;border:1px solid var(--gray-200);border-top:none;border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+.accordion-item.open .accordion-body{max-height:1600px}
+.check-list{list-style:none;padding:4px 0}
+.checklist-item{display:flex;align-items:flex-start;gap:14px;padding:12px 18px;cursor:pointer;transition:background .25s,opacity .25s;border-bottom:1px solid var(--gray-100)}
+.checklist-item:last-child{border-bottom:none}
+.checklist-item:hover{background:var(--gray-50)}
+.check-box{flex-shrink:0;width:18px;height:18px;border:2px solid var(--gray-300);border-radius:5px;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:var(--trans)}
+.check-tick{font-size:.6rem;color:#fff;opacity:0;line-height:1}
+.checklist-item.checked{opacity:0.55}
+.checklist-item.checked .check-box{background:var(--blue);border-color:var(--blue)}
+.checklist-item.checked .check-tick{opacity:1}
+.check-name{font-size:.87rem;font-weight:600;color:var(--gray-900);transition:color .15s;line-height:1.4}
+.check-desc{font-size:.77rem;color:var(--gray-500);margin-top:3px;line-height:1.55}
+.checklist-item.checked .check-name{text-decoration:line-through;color:var(--gray-300)}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#fff;padding:60px 0 36px}
+.footer-inner{max-width:1140px;margin:0 auto;padding:0 24px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand{}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#fff;margin-bottom:8px;line-height:1.2}
+.footer-logo .accent{color:#4db8ff;font-style:italic}
+.footer-tagline{font-size:.9rem;color:rgba(255,255,255,.38);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:16px}
+.footer-col-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col-links a{font-size:.85rem;color:rgba(255,255,255,.65);text-decoration:none;transition:color .15s;font-weight:500}
+.footer-col-links a:hover{color:#fff;text-decoration:none}
+.footer-info-item{font-size:.82rem;color:rgba(255,255,255,.5);display:flex;align-items:flex-start;gap:8px;margin-bottom:10px;line-height:1.5}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin-bottom:20px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.72rem;color:rgba(255,255,255,.2)}
+.footer-route{font-size:.72rem;color:rgba(255,255,255,.2);letter-spacing:.04em}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;text-align:center}}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+
+/* ── MISC UTILITIES ── */
+.text-gradient{background:linear-gradient(90deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+@media(max-width:900px){.gym-layout{grid-template-columns:1fr!important}}
+@media(max-width:900px){.hotel-layout{grid-template-columns:1fr!important}}
+
+/* ── MOBILE OVERRIDES ── */
+@media(max-width:768px){
+  .section{padding:60px 0}
+  .hero-stats{max-width:100%}
+  .hero-ctas{gap:8px}
+  .btn-hero-primary,.btn-hero-secondary{font-size:.8rem;padding:11px 20px}
+  #map-wrap{max-width:100%}
+  .leg-chips{gap:4px}
+  .leg-chip{font-size:.65rem;padding:4px 9px}
+  .section-banner{min-height:160px;padding:20px 20px}
+  .section-banner-title{font-size:1.4rem}
+  .cards-grid{grid-template-columns:1fr}
+  .card-featured{flex-direction:column;gap:14px}
+  .timeline-item{padding-left:48px}
+  .tl-header{flex-direction:column;align-items:flex-start;gap:6px}
+  .tl-route{font-size:1rem}
+}
+@media(max-width:480px){
+  .hero-title{font-size:2.4rem}
+  .section-title{font-size:1.8rem}
+  .stat-bar{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid var(--gray-200)}
+  .jump-card{min-width:110px;padding:10px 8px}
+  .jump-card-sub{display:none}
+  .accordion-header{padding:12px 14px}
+  .checklist-item{padding:10px 14px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* ── GLOBE NAV ARROWS ── */
+.globe-controls{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:4px}
+.globe-nav{display:flex;align-items:center;justify-content:center;gap:10px}
+.globe-nav-arrow{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:rgba(255,255,255,.82);font-size:.85rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;backdrop-filter:blur(4px);line-height:1;padding:0}
+.globe-nav-arrow:hover:not(:disabled){background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.36);color:#fff;transform:scale(1.08)}
+.globe-nav-arrow:disabled{opacity:.25;cursor:not-allowed;transform:none}
+.globe-nav-label{font-size:.68rem;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:.1em;text-transform:uppercase;min-width:100px;text-align:center;transition:opacity .2s}
+.globe-nav-hint{font-size:.58rem;color:rgba(255,255,255,.45);letter-spacing:.04em;text-align:center;margin-top:-4px}
+
+/* ── SECTION PHOTO BACKGROUNDS (faint, text stays primary) ── */
+section#gym{
+  background:
+    linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)),
+    url('https://rittisakmuaythai.com/wp-content/uploads/2023/12/DSC00039.jpg') center 40%/cover no-repeat;
+}
+section#hotel{
+  background:
+    linear-gradient(rgba(248,250,252,0.83),rgba(248,250,252,0.83)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&q=80&auto=format&fit=crop') center 60%/cover no-repeat;
+}
+section#journey{
+  background:
+    linear-gradient(180deg,rgba(235,245,255,0.82) 0%,rgba(255,255,255,0.82) 100%),
+    url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1800&q=80&auto=format&fit=crop') center 40%/cover no-repeat;
+}
+
+/* ── JOURNEY TABS ── */
+.journey-tabs{display:flex;gap:6px;margin-bottom:36px;background:rgba(14,30,54,0.06);border-radius:14px;padding:5px}
+.journey-tab-btn{flex:1;padding:12px 20px;border-radius:10px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;color:var(--gray-500);cursor:pointer;transition:all .22s ease;letter-spacing:.03em}
+.journey-tab-btn.active{background:#fff;color:var(--navy);box-shadow:0 2px 10px rgba(0,0,0,.09)}
+.journey-tab-btn:hover:not(.active){color:var(--navy);background:rgba(0,0,0,.04)}
+.journey-tab-content{display:none}
+.journey-tab-content.active{display:block}
+/* ── GLOBE ROUTE TOGGLE ── */
+.globe-route-toggle{display:flex;gap:0;border:1px solid rgba(255,255,255,.22);border-radius:50px;overflow:hidden;margin-bottom:6px}
+.route-toggle-btn{padding:7px 18px;font-size:.7rem;font-weight:700;background:transparent;border:none;color:rgba(255,255,255,.45);cursor:pointer;transition:all .22s;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+.route-toggle-btn.active{background:rgba(255,255,255,.15);color:#fff}
+.route-toggle-btn:hover:not(.active){color:rgba(255,255,255,.75)}
+
+/* ── TRIP SNAPSHOT BAND ── */
+.snapshot-band{background:linear-gradient(135deg,#0a1628 0%,#0e2040 100%);padding:48px 0 52px;border-bottom:1px solid rgba(255,255,255,.06)}
+.snapshot-inner{max-width:1080px;margin:0 auto;padding:0 24px}
+.snapshot-eyebrow{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,200,255,.6);margin-bottom:10px}
+.snapshot-title{text-align:center;font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:36px;letter-spacing:.01em}
+.snapshot-dates{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:44px;flex-wrap:wrap;gap:4px}
+.snap-date-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 24px;text-align:center;min-width:140px}
+.snap-date-card.highlight{background:rgba(240,90,40,.12);border-color:rgba(240,90,40,.35)}
+.snap-date-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:5px}
+.snap-date-day{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.1}
+.snap-date-sub{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:2px}
+.snap-arrow{color:rgba(0,200,255,.4);font-size:1.1rem;padding:0 6px;align-self:center}
+.snap-vday{background:rgba(220,50,80,.14);border:1px solid rgba(220,50,80,.35);border-radius:10px;padding:7px 16px;text-align:center;font-size:.72rem;font-weight:700;color:rgba(255,140,160,.85);margin-bottom:44px;display:inline-block;margin-left:50%;transform:translateX(-50%)}
+.cost-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.cost-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:20px 22px}
+.cost-card.total{background:rgba(0,168,150,.12);border-color:rgba(0,168,150,.3)}
+.cost-icon{font-size:1.4rem;margin-bottom:10px;display:block}
+.cost-label{font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:6px}
+.cost-amount{font-size:1.3rem;font-weight:800;color:#fff;line-height:1}
+.cost-amount.total-num{color:#00d4aa;font-size:1.5rem}
+.cost-note{font-size:.67rem;color:rgba(255,255,255,.3);margin-top:6px;line-height:1.4}
+@media(max-width:600px){
+  .snapshot-dates{flex-direction:column;align-items:center}
+  .snap-arrow{transform:rotate(90deg)}
+  .cost-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="top-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-logo-mark">🥊</span>
+      <span class="nav-logo-text">
+        <span>KPH Guide</span>
+        <span class="nav-logo-sub">Muay Thai · Koh Phangan</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#gym" data-section="gym">The Gym</a></li>
+      <li><a href="#hotel" data-section="hotel">The Hotel</a></li>
+      <li><a href="#journey" data-section="journey">The Journey</a></li>
+      <li><a href="#prep" data-section="prep">Trip Prep</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://rittisakmuaythai.com/" target="_blank" class="nav-cta">Book Training →</a>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#gym" onclick="closeMenu()">🥊 The Gym</a>
+    <a href="#hotel" onclick="closeMenu()">🏨 The Hotel</a>
+    <a href="#journey" onclick="closeMenu()">✈️ The Journey</a>
+    <a href="#prep" onclick="closeMenu()">📋 Trip Prep</a>
+    <a href="https://rittisakmuaythai.com/" target="_blank" class="nav-mobile-cta" onclick="closeMenu()">Book Training →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Seattle → Koh Phangan · Muay Thai Journey</div>
+      <h1 class="hero-title">Train Where<br><span class="accent">Champions Are Made.</span></h1>
+      <p class="hero-sub-title">Feb 6–21, 2027 · 16,000 km · 4 flights · 1 ferry · One destination worth every mile.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">~24h</span>
+          <span class="hero-stat-label">Total Travel</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">4</span>
+          <span class="hero-stat-label">Flights</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">13</span>
+          <span class="hero-stat-label">Trainers</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">35</span>
+          <span class="hero-stat-label">Items Packed</span>
+        </div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#gym" class="btn-hero-primary">Explore the Gym →</a>
+        <a href="#journey" class="btn-hero-secondary">See the Route</a>
+      </div>
+    </div>
+    <div class="hero-globe">
+      <div id="map-wrap">
+        <canvas id="map-canvas"></canvas>
+      </div>
+      <div class="leg-chips">
+        <span class="leg-chip" id="chip-0">✈ SEA → TPE · ~11 hrs</span>
+        <span class="leg-chip" id="chip-1">✈ TPE → BKK · ~3.5 hrs</span>
+        <span class="leg-chip" id="chip-2">✈ BKK → USM · ~1.5 hrs</span>
+        <span class="leg-chip" id="chip-3">⛴ USM → KPH · ~30 min</span>
+      </div>
+      <div class="globe-controls">
+        <div class="globe-route-toggle">
+          <button class="route-toggle-btn active" id="route-outbound" onclick="switchGlobeRoute('outbound')">&#9992; Outbound</button>
+          <button class="route-toggle-btn" id="route-return" onclick="switchGlobeRoute('return')">&#9992; Return</button>
+        </div>
+        <div class="globe-nav">
+          <button class="globe-nav-arrow" id="nav-prev" aria-label="Previous stop" disabled>&#9664;</button>
+          <div id="map-tooltip">
+            <div class="tt-city" id="tt-city">SEATTLE</div>
+            <div class="tt-sub">
+              <span class="tt-transport" id="tt-transport">&#9992; Departure</span>
+              <span class="tt-duration" id="tt-duration">Starting point</span>
+            </div>
+          </div>
+          <button class="globe-nav-arrow" id="nav-next" aria-label="Next stop">&#9654;</button>
+        </div>
+        <div class="globe-nav-hint">arrow keys or click to step</div>
+        <button class="replay-btn" id="replay-btn">↻ Replay</button>
+      </div>
+    </div>
+  </div>
+  <div id="flash-overlay"></div>
+</section>
+
+<!-- JUMP NAV -->
+<section id="jump-nav">
+  <div class="jump-nav-inner">
+    <a href="#gym"     class="jump-card gym">    <span class="jump-card-icon">🥊</span><span class="jump-card-title">The Gym</span>    <span class="jump-card-sub">Rittisak Muaythai</span></a>
+    <a href="#hotel"   class="jump-card hotel">  <span class="jump-card-icon">🏨</span><span class="jump-card-title">The Hotel</span>  <span class="jump-card-sub">Maehaad Bay Resort</span></a>
+    <a href="#journey" class="jump-card journey"><span class="jump-card-icon">✈️</span><span class="jump-card-title">The Journey</span><span class="jump-card-sub">Flights & transfers</span></a>
+    <a href="#prep"    class="jump-card prep">   <span class="jump-card-icon">📋</span><span class="jump-card-title">Trip Prep</span>   <span class="jump-card-sub">35-item checklist</span></a>
+  </div>
+</section>
+
+
+<!-- TRIP SNAPSHOT -->
+<div class="snapshot-band">
+  <div class="snapshot-inner">
+    <div class="snapshot-eyebrow">Your trip</div>
+    <div class="snapshot-title">February 2027 · 2 Weeks in Koh Phangan ❤️</div>
+
+    <div class="snapshot-dates">
+      <div class="snap-date-card">
+        <div class="snap-date-label">Depart Seattle</div>
+        <div class="snap-date-day">Sat, Feb 6</div>
+        <div class="snap-date-sub">2027 · Evening</div>
+      </div>
+      <div class="snap-arrow">✈</div>
+      <div class="snap-date-card">
+        <div class="snap-date-label">Arrive Koh Phangan</div>
+        <div class="snap-date-day">Mon, Feb 8</div>
+        <div class="snap-date-sub">2027 · Evening</div>
+      </div>
+      <div class="snap-arrow">🥊</div>
+      <div class="snap-date-card highlight">
+        <div class="snap-date-label">Valentine's Day</div>
+        <div class="snap-date-day">Sun, Feb 14</div>
+        <div class="snap-date-sub">2027 · Week 1 done</div>
+      </div>
+      <div class="snap-arrow">✈</div>
+      <div class="snap-date-card">
+        <div class="snap-date-label">Depart Koh Phangan</div>
+        <div class="snap-date-day">Sat, Feb 20</div>
+        <div class="snap-date-sub">2027 · Morning</div>
+      </div>
+      <div class="snap-arrow">🏠</div>
+      <div class="snap-date-card">
+        <div class="snap-date-label">Home in Seattle</div>
+        <div class="snap-date-day">Sun, Feb 21</div>
+        <div class="snap-date-sub">2027 · Evening</div>
+      </div>
+    </div>
+
+    <div class="cost-grid">
+      <div class="cost-card">
+        <span class="cost-icon">✈️</span>
+        <div class="cost-label">Return Flights</div>
+        <div class="cost-amount">$1,200–1,600</div>
+        <div class="cost-note">SEA → TPE → BKK → USM → KPH (roundtrip, peak Feb season). EVA Air / Bangkok Airways. Book 3–4 months out for best fares.</div>
+      </div>
+      <div class="cost-card">
+        <span class="cost-icon">🥊</span>
+        <div class="cost-label">Training + Accommodation</div>
+        <div class="cost-amount">$315–420</div>
+        <div class="cost-note">Rittisak on-site package · 2× daily sessions · Fan bamboo hut ($315) or AC bungalow ($420) · 2 weeks all-in.</div>
+      </div>
+      <div class="cost-card">
+        <span class="cost-icon">🍜</span>
+        <div class="cost-label">Food & Drink</div>
+        <div class="cost-amount">~$120–180</div>
+        <div class="cost-note">Thai meals avg ฿60–100. Chaloklum has great Western options too. Budget ฿300–500/day ($8–14 USD) covers 3 meals comfortably.</div>
+      </div>
+      <div class="cost-card">
+        <span class="cost-icon">🛵</span>
+        <div class="cost-label">Transport & Extras</div>
+        <div class="cost-amount">~$150–200</div>
+        <div class="cost-note">Scooter rental (~฿250/day), island taxis, ferry tickets, SIM card, shopping & activities.</div>
+      </div>
+      <div class="cost-card total">
+        <span class="cost-icon">💰</span>
+        <div class="cost-label">Estimated Total</div>
+        <div class="cost-amount total-num">~$1,800–2,400</div>
+        <div class="cost-note">All-in for 2 weeks. Budget end closer to $1,800; comfort end with upgrades closer to $2,400. Thailand is exceptional value.</div>
+      </div>
+      <div class="cost-card">
+        <span class="cost-icon">📅</span>
+        <div class="cost-label">Training Days</div>
+        <div class="cost-amount">12 days</div>
+        <div class="cost-note">Feb 9–20 · Mon–Sat · 8–10 AM &amp; 4–6 PM · ~24 sessions total. Feb 14 (Valentine's) falls on a Sunday — rest day.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GYM -->
+<section id="gym" class="section">
+  <div class="container">
+    <div class="section-banner section-banner-gym reveal">
+      <span class="section-banner-badge">🇹🇭 Koh Phangan, Thailand</span>
+      <div>
+        <div class="section-banner-label">Koh Phangan · Muay Thai</div>
+        <div class="section-banner-title">Rittisak Muaythai</div>
+        <div class="section-banner-sub">Where technique meets tradition — on a tropical island.</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start" class="gym-layout">
+      <div>
+        <div class="section-header reveal">
+          <div class="section-eyebrow">The Training Camp</div>
+          <h2 class="section-title">Rittisak Muaythai</h2>
+          <p class="section-desc">Authentic Muay Thai on Koh Phangan Island — where technique, tradition, and tropical paradise meet. Train under champions, not Instagram fitness instructors.</p>
+        </div>
+        <div class="stat-bar reveal">
+          <div class="stat-item"><span class="stat-num" style="color:#f05a28">13</span><span class="stat-label">Full-Time Trainers</span></div>
+          <div class="stat-item"><span class="stat-num" style="color:#0066cc">All</span><span class="stat-label">Levels Welcome</span></div>
+          <div class="stat-item"><span class="stat-num" style="color:#00a896;font-size:1.1rem">Femur</span><span class="stat-label">Fighting Style</span></div>
+          <div class="stat-item"><span class="stat-num" style="color:#f59e0b">⭐ 5.0</span><span class="stat-label">Student Rated</span></div>
+        </div>
+        <div class="card card-featured reveal">
+          <div class="feat-icon">🏆</div>
+          <div>
+            <div class="card-label">Head Trainer &amp; Owner</div>
+            <div class="card-title">Kru Chok Rittisak</div>
+            <div class="card-body">Former Rajadamnern Stadium Champion — Kru Chok won the legendary <strong style="color:rgba(255,255,255,.95)">Golden Jacket (Seua Samart)</strong> for 10 consecutive victories during the golden era of Muay Thai. His Muay Femur style — built on counters, rhythm, and ring IQ — is what he teaches every student who walks through the door.</div>
+            <div style="margin-top:14px"><span class="badge badge-gold">🥇 Rajadamnern Champion</span><span class="badge badge-gold">⚡ Golden Jacket — 10 Straight Wins</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card card-gym-photo reveal reveal-delay-1">
+          <span class="card-icon">🥊</span>
+          <div class="card-label">The Experience</div>
+          <div class="card-title">Your Muay Thai Oasis</div>
+          <div class="card-body">13 full-time Thai trainers mean you never get lost in the crowd. The Muay Femur approach — focused on countering, faking, and flow — is technique-first, ego-free. Beginners and pro fighters train side by side in a family atmosphere unlike any other gym in Thailand.</div>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:4px"><span class="badge badge-orange">Muay Femur Style</span><span class="badge badge-blue">All Levels</span><span class="badge badge-green">Family Atmosphere</span></div>
+        </div>
+        <div class="card card-location-photo reveal reveal-delay-2">
+          <span class="card-icon">📍</span>
+          <div class="card-label">Location &amp; Access</div>
+          <div class="card-title">Chaloklum Village</div>
+          <div class="card-body">Set in a peaceful Thai fishing village surrounded by mountains and palm trees — 700 metres from Chaloklum Beach. Mountain hiking, waterfalls, and natural swimming pools nearby. Close to 7-Eleven, Tesco, and plenty of Thai and western restaurants.</div>
+          <div class="contact-bar" style="margin-top:14px">
+            <div class="contact-item">📍 10/1 Moo 7, Koh Phangan, Suratthani 84280</div>
+            <div class="contact-item">📞 +66 98 082 5800</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap" class="reveal reveal-delay-3">
+          <a href="https://rittisakmuaythai.com/" target="_blank" class="btn btn-orange">Visit Rittisak Muaythai →</a>
+          <a href="#prep" class="btn btn-outline">35-Item Gear Checklist</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section id="hotel" class="section section-alt">
+  <div class="container">
+    <div class="section-banner section-banner-hotel reveal">
+      <span class="section-banner-badge">🏖️ Haad Maehaad, Koh Phangan</span>
+      <div>
+        <div class="section-banner-label">Haad Maehaad · Koh Phangan</div>
+        <div class="section-banner-title">Maehaad Bay Resort</div>
+        <div class="section-banner-sub">Beachfront recovery between training sessions.</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start" class="hotel-layout">
+      <div>
+        <div class="section-header reveal">
+          <div class="section-eyebrow blue">Where You'll Stay</div>
+          <h2 class="section-title">Maehaad Bay Resort</h2>
+          <p class="section-desc">A four-star beachfront retreat on Haad-Maehaad — the perfect base for recovery between training sessions. Sunsets, coral reefs, and a sandbar that emerges at low tide.</p>
+        </div>
+        <div class="stat-bar reveal">
+          <div class="stat-item"><span class="stat-num" style="font-size:1.2rem;color:#f59e0b">⭐⭐⭐⭐</span><span class="stat-label">4-Star Resort</span></div>
+          <div class="stat-item"><span class="stat-num" style="font-size:1.3rem">🏖️</span><span class="stat-label">Beachfront</span></div>
+          <div class="stat-item"><span class="stat-num" style="font-size:1.3rem">🌅</span><span class="stat-label">Sunset Views</span></div>
+          <div class="stat-item"><span class="stat-num" style="font-size:1.3rem">🏝️</span><span class="stat-label">Koh Maa</span></div>
+        </div>
+        <div class="card reveal" style="background:linear-gradient(135deg,rgba(10,46,69,0.85),rgba(13,74,110,0.82)),url('https://images.unsplash.com/photo-1729615385162-9e21e04bbaf9?w=1200&q=80&auto=format&fit=crop') center/cover no-repeat;border-color:#0a2e45;margin-bottom:0">
+          <span class="card-icon">🏝️</span>
+          <div class="card-label" style="color:rgba(255,255,255,.4)">Natural Wonder</div>
+          <div class="card-title" style="color:#fff">The Koh Maa Sandbar</div>
+          <div class="card-body" style="color:rgba(255,255,255,.65)">At low tide, a natural sandbar emerges connecting Maehaad Beach to the small island of Koh Maa — walk across to a deserted island with coral reefs. One of Koh Phangan's most magical experiences, right outside your door.</div>
+          <div style="margin-top:14px"><span class="badge badge-teal">Coral Reef Snorkeling</span><span class="badge badge-blue">Walk at Low Tide</span><span class="badge badge-gold">Hidden Gem</span></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card card-hotel-photo reveal reveal-delay-1">
+          <span class="card-icon">🏨</span>
+          <div class="card-label">The Resort</div>
+          <div class="card-title">4-Star Beachfront Escape</div>
+          <div class="card-body">Set on the quiet northern shore of Koh Phangan, Maehaad Bay Resort offers the ideal recovery environment — relaxed tropical atmosphere, four-star facilities, and a stunning sunset view over the water every evening.</div>
+          <div style="margin-top:12px"><span class="badge badge-blue">Pool &amp; Facilities</span><span class="badge badge-blue">Restaurant On-Site</span></div>
+        </div>
+        <div class="card card-hotel-photo reveal reveal-delay-2">
+          <span class="card-icon">✨</span>
+          <div class="card-label">Amenities</div>
+          <div class="card-title">Everything You Need</div>
+          <div class="amenity-grid">
+            <div class="amenity-item">🏊 Swimming Pool</div>
+            <div class="amenity-item">🍽️ Restaurant</div>
+            <div class="amenity-item">🤿 Water Activities</div>
+            <div class="amenity-item">🌅 Beach Access</div>
+            <div class="amenity-item">📶 Free WiFi</div>
+            <div class="amenity-item">🛏️ Comfortable Rooms</div>
+          </div>
+          <div class="contact-bar" style="flex-direction:column;align-items:flex-start;gap:8px;margin-top:14px">
+            <div class="contact-item">📍 106/4 Moo 7, T.Koh Phangan, Suratthani</div>
+            <div class="contact-item">📞 +66 77 374328</div>
+            <div class="contact-item">✉️ hello@maehaadbayresort.com</div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-3">
+          <a href="http://www.maehaadbayresort.com/" target="_blank" class="btn btn-navy">Visit Maehaad Bay Resort →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow teal">Getting There & Back</div>
+      <h2 class="section-title">The Journey</h2>
+      <p class="section-desc">Every leg, both ways. Click a tab to see the outbound route to Koh Phangan or the return trip home to Seattle.</p>
+    </div>
+
+    <div class="journey-tabs">
+      <button class="journey-tab-btn active" id="jtab-outbound" onclick="switchJourneyTab('outbound')">&#9992; Getting There — SEA → KPH</button>
+      <button class="journey-tab-btn" id="jtab-return" onclick="switchJourneyTab('return')">&#9992; Getting Home — KPH → SEA</button>
+    </div>
+
+    <div id="journey-outbound" class="journey-tab-content active">
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-plane">1</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-plane">✈ International Flight</div>
+            <div class="tl-duration">~11 hrs</div>
+          </div>
+          <div class="tl-route">Seattle → Taipei</div>
+          <div class="tl-meta"><strong>Sat, Feb 6, 2027</strong> · SEA → TPE (Taoyuan) · EVA Air / China Airlines · ~$800–1,400 USD roundtrip</div>
+          <div class="tl-desc">The big one — crossing the Pacific. Book a window seat on the right side of the plane for views of the North Pacific. Bring a neck pillow, noise-cancelling headphones, and melatonin. The flight departs SEA typically in the evening, arriving in Taipei the next morning local time.</div>
+          <div class="tl-tip">EVA Air's Royal Laurel business class is one of Asia's best if you're treating yourself — also search for premium economy deals which run ~$1,800 roundtrip.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-plane">2</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-plane">✈ Connecting Flight</div>
+            <div class="tl-duration">~3.5 hrs</div>
+          </div>
+          <div class="tl-route">Taipei → Bangkok</div>
+          <div class="tl-meta"><strong>Sun, Feb 7, 2027</strong> · TPE → BKK (Suvarnabhumi) · EVA Air / Thai Airways · Included in through-ticket</div>
+          <div class="tl-desc">A comfortable mid-length hop. Taipei Taoyuan Airport (TPE) has excellent food, lounge access, and transit hotels if you have a long layover. Stock up on Taiwanese snacks for the road — the pineapple cakes from the airport shops are excellent.</div>
+          <div class="tl-tip">Allow at least 2.5 hours for your connection in TPE. Immigration lines can be long at peak times.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-plane">3</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-plane">✈ Domestic Flight</div>
+            <div class="tl-duration">~1.5 hrs</div>
+          </div>
+          <div class="tl-route">Bangkok → Koh Samui</div>
+          <div class="tl-meta"><strong>Mon, Feb 8, 2027</strong> · BKK → USM · Bangkok Airways · ~$80–150 USD one-way</div>
+          <div class="tl-desc">Bangkok Airways is a boutique airline with a surprisingly premium experience including a complimentary lounge at BKK. Samui Airport (USM) is one of the world's most beautiful airports — an open-air terminal surrounded by palm trees. No jetway — you walk across the tarmac.</div>
+          <div class="tl-tip">Book Bangkok Airways early — this route sells out fast during high season (Dec–Feb) and Full Moon Party weeks.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-ferry">4</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-ferry">⛴ High-Speed Ferry</div>
+            <div class="tl-duration">~30 min</div>
+          </div>
+          <div class="tl-route">Koh Samui → Koh Phangan</div>
+          <div class="tl-meta"><strong>Mon, Feb 8, 2027</strong> · Nathon Pier → Thong Sala Pier · Lomprayah or Seatran Ferry · ~300–400 THB</div>
+          <div class="tl-desc">Multiple ferries run daily with the first departing around 7 AM. The crossing takes about 30 minutes on a high-speed catamaran. Book ahead during Full Moon Party week — the ferry fills up fast both ways. Sit on the upper deck for the arrival view of Koh Phangan's green mountains.</div>
+          <div class="tl-tip">Lomprayah is slightly faster and more comfortable. Seatran is cheaper. Both are reliable.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-taxi">5</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-taxi">🏍️ Local Transport</div>
+            <div class="tl-duration">~35 min</div>
+          </div>
+          <div class="tl-route">Thong Sala Pier → Chaloklum</div>
+          <div class="tl-meta"><strong>Mon, Feb 8, 2027 · Evening</strong> · ~30–40 min · Songthaew shared taxi or private taxi · ~150–400 THB</div>
+          <div class="tl-desc">Songthaew trucks and private taxis wait right at the pier. Always agree on the price before getting in. The scenic ride to Chaloklum village winds through mountains and coconut groves. A private taxi to Chaloklum runs about 400 THB ($12 USD) — cheaper if you share with other passengers.</div>
+          <div class="tl-tip">Grab a local SIM card at 7-Eleven near the pier before your taxi — you'll need maps to navigate the island.</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /journey-outbound -->
+
+  <div id="journey-return" class="journey-tab-content">
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-taxi">1</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-taxi">🏍️ Local Transport</div>
+            <div class="tl-duration">~35 min</div>
+          </div>
+          <div class="tl-route">Chaloklum → Thong Sala Pier</div>
+          <div class="tl-meta"><strong>Sat, Feb 20, 2027 · Morning</strong> · ~30–40 min · Songthaew or private taxi · ~150–400 THB</div>
+          <div class="tl-desc">Grab a private taxi or songthaew from Chaloklum village to Thong Sala Pier on the south of the island. The ride winds back through the same mountain and coconut grove scenery you arrived through. Budget extra time during Full Moon Party week — traffic can back up near the pier.</div>
+          <div class="tl-tip">Book your onward ferry ticket online the night before to avoid pier queues. Lomprayah and Seatran both offer online booking.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-ferry">2</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-ferry">⛴ High-Speed Ferry</div>
+            <div class="tl-duration">~30 min</div>
+          </div>
+          <div class="tl-route">Koh Phangan → Koh Samui</div>
+          <div class="tl-meta"><strong>Sat, Feb 20, 2027</strong> · Thong Sala Pier → Nathon/Bangrak Pier · Lomprayah or Seatran · ~300–400 THB</div>
+          <div class="tl-desc">The short island hop back to Koh Samui. Multiple departures throughout the day — the earliest is around 7 AM, last ferry around 6 PM. Take one last look back at Koh Phangan's green mountains as you leave. Upper deck gives the best view.</div>
+          <div class="tl-tip">Confirm which pier on Koh Samui the ferry arrives at — Bangrak and Nathon are both used, and each is a different distance from the airport.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-plane">3</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-plane">✈ Domestic Flight</div>
+            <div class="tl-duration">~1.5 hrs</div>
+          </div>
+          <div class="tl-route">Koh Samui → Bangkok</div>
+          <div class="tl-meta"><strong>Sat, Feb 20, 2027</strong> · USM → BKK (Suvarnabhumi) · Bangkok Airways · ~$80–150 USD one-way</div>
+          <div class="tl-desc">The return leg through Samui Airport (USM) — still one of the world's most scenic airports. Bangkok Airways provides a complimentary lounge here too, so arrive early to enjoy it. The flight brings you back into the cool, air-conditioned world of Suvarnabhumi Airport.</div>
+          <div class="tl-tip">Allow at least 2.5–3 hours between your Samui arrival and your Bangkok international departure — ferry delays can happen.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-plane">4</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-plane">✈ Connecting Flight</div>
+            <div class="tl-duration">~3.5 hrs</div>
+          </div>
+          <div class="tl-route">Bangkok → Taipei</div>
+          <div class="tl-meta"><strong>Sat, Feb 20, 2027</strong> · BKK → TPE (Taoyuan) · EVA Air / Thai Airways · Included in through-ticket</div>
+          <div class="tl-desc">The hop back to Taipei Taoyuan for your Pacific crossing connection. A comfortable flight — use the time to decompress, write down your training highlights, or stock up on Taiwanese souvenirs in the terminal if you have a layover. TPE has some of Asia's best airport food.</div>
+          <div class="tl-tip">EVA Air's transit lounge at TPE is excellent if you have access. Great for a shower and meal before the long haul home.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-step tl-step-plane">5</div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-badge tl-plane">✈ Trans-Pacific</div>
+            <div class="tl-duration">~11 hrs</div>
+          </div>
+          <div class="tl-route">Taipei → Seattle</div>
+          <div class="tl-meta"><strong>Sun, Feb 21, 2027</strong> · TPE → SEA · EVA Air / China Airlines · Included in roundtrip fare</div>
+          <div class="tl-desc">The long Pacific crossing home. You'll likely arrive at SEA in the morning after an overnight flight. Customs and immigration at SEA are well-managed — have your declaration card ready. You'll step off the plane fitter, sharper, and carrying a whole new level of Muay Thai.</div>
+          <div class="tl-tip">Set your watch to Seattle time as soon as you board. Use the first few hours of the flight to stay awake and align with home time — it helps minimize jet lag on arrival.</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /journey-return -->
+
+  </div><!-- /container -->
+</section>
+
+<!-- PREP -->
+<section id="prep" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow purple">Before You Leave Seattle</div>
+      <h2 class="section-title">Mission Prep Checklist</h2>
+      <p class="section-desc">35 items across 5 categories. Check them off as you pack and prepare for the journey.</p>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap reveal">
+      <div class="progress-label-row">
+        <span>Mission Readiness</span>
+        <span class="progress-pct" id="progress-pct">0 / 35</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <div id="progress-done-msg" style="display:none;margin-top:12px;text-align:center;font-size:.88rem;font-weight:700;color:#065f46;background:#d1fae5;border:1px solid #6ee7b7;border-radius:8px;padding:10px 16px">🎉 All packed! You're ready for Koh Phangan. Train hard. 🥊</div>
+    </div>
+
+    <!-- Documents -->
+    <div class="accordion-item reveal" id="acc-docs">
+      <button class="accordion-header" onclick="toggleAccordion('acc-docs')">
+        <span class="acc-emoji">📋</span><span class="acc-title">Documents &amp; Passport</span>
+        <span class="acc-count" id="count-docs">0 / 3</span><span class="acc-chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="check-list">
+          <li class="checklist-item" onclick="toggleCheck(this,'docs',0)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Passport — Valid 6+ Months</div><div class="check-desc">Thailand grants US citizens 30-day visa-free entry. Your passport must be valid for at least 6 months beyond your travel date. Check the expiry date NOW.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'docs',1)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Travel Insurance with Sports Coverage</div><div class="check-desc">Standard travel insurance won't cover Muay Thai training injuries. You MUST select a policy that explicitly covers adventure sports or martial arts. Recommended: World Nomads, SafetyWing, Battleface.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'docs',2)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Digital &amp; Physical Document Copies</div><div class="check-desc">Store digital copies of passport, insurance, and booking confirmations in email and cloud storage. Keep physical copies in a separate bag from originals.</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Money -->
+    <div class="accordion-item reveal" id="acc-money">
+      <button class="accordion-header" onclick="toggleAccordion('acc-money')">
+        <span class="acc-emoji">💰</span><span class="acc-title">Currency &amp; Money</span>
+        <span class="acc-count" id="count-money">0 / 4</span><span class="acc-chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="check-list">
+          <li class="checklist-item" onclick="toggleCheck(this,'money',0)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Thai Baht — Know the Rate</div><div class="check-desc">1 USD ≈ 33–35 THB. Familiarise yourself with rough conversions before arriving so you're not overcharged at markets.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'money',1)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Exchange at Superrich Bangkok</div><div class="check-desc">Best rates in Bangkok — use Superrich Thailand, found in major malls and near Suvarnabhumi Airport. Avoid airport currency kiosks — terrible rates.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'money',2)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Wise or Schwab Debit Card</div><div class="check-desc">ATMs on Koh Phangan charge ~200 THB fee per withdrawal. Wise and Charles Schwab debit cards have no foreign transaction fees and reimburse ATM fees globally.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'money',3)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Cash for Local Markets &amp; Taxis</div><div class="check-desc">Credit cards accepted at resorts and gyms, but local markets, songthaew taxis, and street food stalls are cash only. Keep 2,000–5,000 THB on hand at all times.</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Gear -->
+    <div class="accordion-item reveal" id="acc-gear">
+      <button class="accordion-header" onclick="toggleAccordion('acc-gear')">
+        <span class="acc-emoji">🥊</span><span class="acc-title">Muay Thai Gear</span>
+        <span class="acc-count" id="count-gear">0 / 10</span><span class="acc-chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="check-list">
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',0)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Hand Wraps (2+ pairs)</div><div class="check-desc">They get completely soaked after each session. Bring at least 2 pairs so one dries while you train with the other. 180" cotton or Mexican-style wraps.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',1)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Boxing Gloves (8–16 oz)</div><div class="check-desc">Weight depends on your body weight and use. Typically 8–10 oz for bag and pad work, 12–16 oz for sparring. Bring your own for hygiene and fit.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',2)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Shin Guards</div><div class="check-desc">Essential for sparring and partner drills. Leather guards last longer in tropical humidity than foam. Make sure they cover the top of the foot.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',3)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Mouth Guard</div><div class="check-desc">Non-negotiable for any contact or sparring work. A custom-fit dental guard offers the best protection and comfort.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',4)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Groin Protector</div><div class="check-desc">Mandatory for sparring — you will take kicks. Do not show up to a Thai gym without this.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',5)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Ankle Supports</div><div class="check-desc">Muay Thai pivots and roundhouse kicks stress the ankles significantly. Elastic ankle wraps or sleeve-style supports help prevent common sprains.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',6)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Muay Thai Shorts</div><div class="check-desc">Wide-cut for high kicks and leg movement. The gym may sell them on-site. Markets on the island carry great Thai-made options at excellent prices.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',7)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Rash Guard / Compression Shorts</div><div class="check-desc">Great for clinch work to reduce skin friction. Quick-dry synthetic material only — no cotton.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',8)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Extra Training Shirts (3–4 minimum)</div><div class="check-desc">You will soak through a shirt every single session. Pack more than you think you need. Polyester or nylon quick-dry only.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'gear',9)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Sports Sandals / Flip Flops</div><div class="check-desc">For walking around the gym between rounds and in shared shower areas. Essential for gym hygiene.</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Health -->
+    <div class="accordion-item reveal" id="acc-health">
+      <button class="accordion-header" onclick="toggleAccordion('acc-health')">
+        <span class="acc-emoji">💊</span><span class="acc-title">Health &amp; Medicines</span>
+        <span class="acc-count" id="count-health">0 / 10</span><span class="acc-chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="check-list">
+          <li class="checklist-item" onclick="toggleCheck(this,'health',0)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Electrolytes — ESSENTIAL</div><div class="check-desc">You WILL sweat heavily training twice daily in tropical heat. Bring Nuun tablets, LMNT packets, or Liquid IV sachets. Stock up before leaving — expensive and hard to find in Thailand.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',1)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Ibuprofen / Naproxen</div><div class="check-desc">For muscle soreness and inflammation from heavy training. Available in Thailand but bring your preferred brand.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',2)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Tiger Balm</div><div class="check-desc">Widely available throughout Thailand at great prices. Buy it on the island — great for muscle recovery and bruising.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',3)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Imodium / Anti-Diarrheal</div><div class="check-desc">Very common for first-timers in Southeast Asia adjusting to new food and water environments.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',4)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Probiotics</div><div class="check-desc">Start 1–2 weeks before departure. Helps your gut adapt to new food and water — significantly reduces stomach issues.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',5)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Antihistamines</div><div class="check-desc">For tropical bug bites and allergies. Cetirizine (Zyrtec) or loratadine are non-drowsy options.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',6)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Sunscreen SPF 50+</div><div class="check-desc">Training outdoors under tropical sun is brutal. Apply before every outdoor session and reapply every 2 hours. Use reef-safe formula.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',7)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">DEET Insect Repellent</div><div class="check-desc">Mosquitoes are real near Chaloklum's jungle and mountain areas. Use 30–50% DEET in the evenings.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',8)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">First Aid Kit</div><div class="check-desc">Blister pads, kinesiology tape, antiseptic wipes, bandages. Training blisters are inevitable — be prepared.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'health',9)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Prescription Medications</div><div class="check-desc">Bring a full supply plus 1–2 weeks extra. Keep in carry-on luggage — never in checked bags.</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Packing -->
+    <div class="accordion-item reveal" id="acc-packing">
+      <button class="accordion-header" onclick="toggleAccordion('acc-packing')">
+        <span class="acc-emoji">🧳</span><span class="acc-title">General Packing</span>
+        <span class="acc-count" id="count-packing">0 / 8</span><span class="acc-chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="check-list">
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',0)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Quick-Dry Workout Clothes (3–4 sets)</div><div class="check-desc">Training twice daily means laundry piles up fast. Polyester and nylon only — cotton is miserable in tropical heat.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',1)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Lightweight Casual Clothes</div><div class="check-desc">Light linen or cotton for evenings and rest days. Keep it minimal and breathable.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',2)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Rain Jacket</div><div class="check-desc">Thailand gets sudden heavy downpours with no warning. A packable rain jacket weighs almost nothing.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',3)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Reef-Safe Sunscreen</div><div class="check-desc">For swimming and snorkeling. Standard sunscreens harm coral reefs — use mineral-based, reef-safe formulas.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',4)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Water Bottle / Hydration Pack</div><div class="check-desc">Drink constantly — especially during outdoor training. An insulated 1L+ bottle keeps water cooler in the heat.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',5)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Power Adapter</div><div class="check-desc">Thailand uses Type A/B/C outlets — US Type A plugs often work directly. Bring a universal adapter to cover all bases.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',6)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Portable Power Bank</div><div class="check-desc">The Seattle → Koh Phangan journey is 24+ hours door to door. A 10,000–20,000 mAh bank is ideal.</div></div></li>
+          <li class="checklist-item" onclick="toggleCheck(this,'packing',7)"><div class="check-box"><span class="check-tick">✓</span></div><div><div class="check-name">Earplugs</div><div class="check-desc">Koh Phangan is the Full Moon Party island — monthly all-night beach raves audible island-wide. Non-negotiable on those nights.</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Train Hard.<br><span class="accent">Travel Far.</span></div>
+        <p class="footer-tagline">A personal travel guide for the journey from Seattle to Koh Phangan, Thailand — to train Muay Thai at Rittisak.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-col-links">
+          <li><a href="#gym">🥊 The Gym</a></li>
+          <li><a href="#hotel">🏨 The Hotel</a></li>
+          <li><a href="#journey">✈️ The Journey</a></li>
+          <li><a href="#prep">📋 Trip Prep</a></li>
+          <li><a href="#hero">↑ Back to Top</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">External Links</div>
+        <ul class="footer-col-links">
+          <li><a href="https://rittisakmuaythai.com/" target="_blank">Rittisak Muaythai →</a></li>
+          <li><a href="http://www.maehaadbayresort.com/" target="_blank">Maehaad Bay Resort →</a></li>
+          <li><a href="https://www.lomprayah.com/" target="_blank">Lomprayah Ferry →</a></li>
+          <li><a href="https://www.bangkokair.com/" target="_blank">Bangkok Airways →</a></li>
+        </ul>
+        <div style="margin-top:20px">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-info-item">📍 Chaloklum, Koh Phangan</div>
+          <div class="footer-info-item">📞 Rittisak: +66 98 082 5800</div>
+          <div class="footer-info-item">📞 Resort: +66 77 374328</div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <div class="footer-copy">Travel guide built for a personal training trip from Seattle, WA · Always verify current visa rules and travel advisories before departure.</div>
+      <div class="footer-route">SEA → TPE → BKK → USM → KPH 🥊</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== NAV ===== */
+(function(){
+  const nav = document.getElementById('top-nav');
+  const sections = ['gym','hotel','journey','prep'];
+  const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+
+  // Scrolled state
+  window.addEventListener('scroll',()=>{
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+    // Active section highlight
+    let current = '';
+    for(const id of sections){
+      const el = document.getElementById(id);
+      if(el && window.scrollY >= el.offsetTop - 120) current = id;
+    }
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.dataset.section === current);
+    });
+  },{passive:true});
+})();
+
+function toggleMenu(){
+  document.getElementById('nav-mobile').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('nav-mobile').classList.remove('open');
+}
+
+/* ===== PARTICLE CANVAS ===== */
+(function(){
+  const pc = document.getElementById('particle-canvas');
+  if(!pc) return;
+  const pctx = pc.getContext('2d');
+  let pw, ph;
+  const stars = [];
+
+  function resize(){
+    pw = pc.width  = pc.offsetWidth  || window.innerWidth;
+    ph = pc.height = pc.offsetHeight || window.innerHeight;
+    // rebuild stars on resize
+    stars.length = 0;
+    for(let i=0;i<280;i++){
+      stars.push({
+        x: Math.random()*pw,
+        y: Math.random()*ph,
+        r: Math.random()*1.2+0.2,
+        a: Math.random()*0.7+0.1,
+        twinkleSpeed: Math.random()*0.02+0.005,
+        twinkleOffset: Math.random()*Math.PI*2
+      });
+    }
+  }
+
+  let frame=0;
+  function loop(){
+    pctx.clearRect(0,0,pw,ph);
+    frame++;
+    for(const s of stars){
+      const alpha = s.a * (0.6 + 0.4*Math.sin(frame*s.twinkleSpeed + s.twinkleOffset));
+      pctx.beginPath();
+      pctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      pctx.fillStyle = `rgba(200,220,255,${alpha})`;
+      pctx.fill();
+    }
+    requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  loop();
+})();
+
+/* ===== MAP CANVAS — EARTH AT NIGHT ===== */
+(function(){
+  const canvas = document.getElementById('map-canvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const CW = 900, CH = 660;
+  canvas.width = CW; canvas.height = CH;
+
+  const cx  = CW / 2;
+  const cy  = CH / 2 + 10;
+
+  /* ── PROJECTION (animated camera system) ── */
+  let R = 295, lat0Cam = 30, lon0Cam = 155;
+
+  /* Camera state — lerps between start and target with easing */
+  const cam = {
+    R:295, lat:30, lon:155,          // current live values (written to R/lat0Cam/lon0Cam)
+    sR:295, sLat:30, sLon:155,       // start of transition
+    tR:295, tLat:30, tLon:155,       // target of transition
+    p:1.0,                            // progress 0→1 (1 = arrived, no movement)
+    dur:110,                          // duration in frames
+  };
+
+  function easeInOutCubic(t){
+    return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2;
+  }
+
+  function setCameraTarget(tR,tLat,tLon,dur){
+    cam.sR=cam.R; cam.sLat=cam.lat; cam.sLon=cam.lon;
+    cam.tR=tR; cam.tLat=tLat; cam.tLon=tLon;
+    cam.p=0; cam.dur=dur;
+  }
+
+  function updateCamera(){
+    if(cam.p>=1) return;
+    cam.p=Math.min(1, cam.p+1/cam.dur);
+    const e=easeInOutCubic(cam.p);
+    cam.R   = cam.sR   + (cam.tR   - cam.sR)   * e;
+    cam.lat = cam.sLat + (cam.tLat - cam.sLat)  * e;
+    cam.lon = cam.sLon + (cam.tLon - cam.sLon)  * e;
+    R=cam.R; lat0Cam=cam.lat; lon0Cam=cam.lon;
+  }
+
+  function resetCamera(){
+    cam.R=295; cam.lat=30; cam.lon=155;
+    cam.sR=295; cam.sLat=30; cam.sLon=155;
+    cam.tR=295; cam.tLat=30; cam.tLon=155;
+    cam.p=1;
+    R=295; lat0Cam=30; lon0Cam=155;
+  }
+
+  function project(lat, lon, altitudeR) {
+    const toRad = Math.PI/180;
+    const φ  = lat*toRad, λ  = lon*toRad;
+    const φ0 = lat0Cam*toRad, λ0 = lon0Cam*toRad;
+    const cosC = Math.sin(φ0)*Math.sin(φ) + Math.cos(φ0)*Math.cos(φ)*Math.cos(λ-λ0);
+    if(cosC < 0) return null;
+    const xp =  Math.cos(φ)*Math.sin(λ-λ0);
+    const yp = -(Math.cos(φ0)*Math.sin(φ) - Math.sin(φ0)*Math.cos(φ)*Math.cos(λ-λ0));
+    const r = altitudeR !== undefined ? altitudeR : R;
+    return { x: cx + r*xp, y: cy + r*yp, depth: cosC };
+  }
+
+  /* ── GREAT CIRCLE ── */
+  function greatCirclePoint(lat1,lon1,lat2,lon2,t){
+    const toRad=Math.PI/180;
+    const φ1=lat1*toRad,λ1=lon1*toRad,φ2=lat2*toRad,λ2=lon2*toRad;
+    const x1=Math.cos(φ1)*Math.cos(λ1),y1=Math.cos(φ1)*Math.sin(λ1),z1=Math.sin(φ1);
+    const x2=Math.cos(φ2)*Math.cos(λ2),y2=Math.cos(φ2)*Math.sin(λ2),z2=Math.sin(φ2);
+    const dot=Math.min(1,Math.max(-1,x1*x2+y1*y2+z1*z2));
+    const omega=Math.acos(dot);
+    if(Math.abs(omega)<1e-10) return {lat:lat1,lon:lon1};
+    const s=Math.sin(omega);
+    const a=Math.sin((1-t)*omega)/s, b=Math.sin(t*omega)/s;
+    const xr=a*x1+b*x2,yr=a*y1+b*y2,zr=a*z1+b*z2;
+    return {
+      lat: Math.atan2(zr,Math.sqrt(xr*xr+yr*yr))/toRad,
+      lon: Math.atan2(yr,xr)/toRad
+    };
+  }
+
+  /* ── OUTBOUND WAYPOINTS / LEGS / CAMERA ── */
+  const OUTBOUND_WP = [
+    {lat:47.6, lon:-122.3, name:'SEATTLE',     code:'SEA', dest:false, start:true},
+    {lat:25.0, lon: 121.5, name:'TAIPEI',       code:'TPE', dest:false},
+    {lat:13.7, lon: 100.5, name:'BANGKOK',      code:'BKK', dest:false},
+    {lat: 9.5, lon: 100.1, name:'KOH SAMUI',   code:'USM', dest:false},
+    {lat: 9.9, lon: 100.0, name:'KOH PHANGAN', code:'KPH', dest:true},
+  ];
+  const OUTBOUND_LEGS = [
+    {from:0,to:1,type:'plane',chipId:'chip-0',color:'#00c8ff',arcH:R*0.22},
+    {from:1,to:2,type:'plane',chipId:'chip-1',color:'#00c8ff',arcH:R*0.10},
+    {from:2,to:3,type:'plane',chipId:'chip-2',color:'#00c8ff',arcH:R*0.05},
+    {from:3,to:4,type:'ferry',chipId:'chip-3',color:'#00ffb3',arcH:R*0.015},
+  ];
+  const OUTBOUND_CAM = [
+    {R:295, lat:30,   lon:155},
+    {R:316, lat:22,   lon:128},
+    {R:350, lat:16,   lon:111},
+    {R:390, lat:11,   lon:103},
+    {R:7800, lat:9.75, lon:100.05},
+  ];
+  const OUTBOUND_DUR = [0, 110, 90, 70, 300];
+
+  /* ── RETURN WAYPOINTS / LEGS / CAMERA ── */
+  const RETURN_WP = [
+    {lat: 9.9, lon: 100.0, name:'KOH PHANGAN', code:'KPH', dest:true,  start:true},
+    {lat: 9.5, lon: 100.1, name:'KOH SAMUI',   code:'USM', dest:false},
+    {lat:13.7, lon: 100.5, name:'BANGKOK',      code:'BKK', dest:false},
+    {lat:25.0, lon: 121.5, name:'TAIPEI',       code:'TPE', dest:false},
+    {lat:47.6, lon:-122.3, name:'SEATTLE',      code:'SEA', dest:false, end:true},
+  ];
+  const RETURN_LEGS = [
+    {from:0,to:1,type:'ferry',chipId:'chip-0',color:'#00ffb3',arcH:R*0.015},
+    {from:1,to:2,type:'plane',chipId:'chip-1',color:'#00c8ff',arcH:R*0.05},
+    {from:2,to:3,type:'plane',chipId:'chip-2',color:'#00c8ff',arcH:R*0.10},
+    {from:3,to:4,type:'plane',chipId:'chip-3',color:'#00c8ff',arcH:R*0.22},
+  ];
+  const RETURN_CAM = [
+    {R:7800, lat:9.75,  lon:100.05},  // KPH — start island close-up
+    {R:480,  lat:9.8,   lon:100.5},   // USM — pull back to Gulf of Thailand
+    {R:350,  lat:13.7,  lon:102.5},   // BKK — SE Asia overview
+    {R:316,  lat:22,    lon:128},     // TPE — East Asia corridor
+    {R:295,  lat:30,    lon:155},     // SEA — full Pacific (home)
+  ];
+  const RETURN_DUR = [0, 240, 100, 110, 280];
+
+  /* ── ACTIVE ROUTE REFERENCES (mutable) ── */
+  let WAYPOINTS    = OUTBOUND_WP;
+  let LEGS         = OUTBOUND_LEGS;
+  let CAM_TARGETS  = OUTBOUND_CAM;
+  let CAM_DURATIONS= OUTBOUND_DUR;
+
+  /* ── COUNTRIES — simplified accurate outlines [lon,lat] ── */
+  const LANDMASSES = [
+    // ── NORTH AMERICA ──
+    {name:'usa_west',points:[[-124.7,48.5],[-123,48],[-122.5,47.5],[-124,46.9],[-124.6,46.2],[-124.1,43.8],[-124.4,42.8],[-124.2,41.8],[-124.4,40.7],[-124,38],[-122.5,37.5],[-121.9,36.6],[-120.8,35.5],[-119.8,34.4],[-118.3,34],[-117.2,32.7],[-117.1,32.5],[-111,31.3],[-108,31.3],[-106.5,31.8],[-104.7,29.5],[-99.7,27.8],[-97,25.9],[-93,29.5],[-89.5,29],[-88,30.3],[-85.5,30],[-82.5,29.5],[-81.3,25.1],[-80.1,25.2],[-80.2,27],[-80.9,31],[-75.5,35.2],[-74,40],[-71,42.5],[-66.9,44.8],[-70,45],[-77,44],[-84,46],[-88,47],[-96.5,49],[-109,49],[-117.5,49],[-124.7,48.5]]},
+    {name:'alaska',points:[[-137,57],[-140,58.5],[-142,59.5],[-144,60],[-147,61],[-149.5,61.5],[-152,60.5],[-153,58],[-154,57.5],[-156,58.5],[-157,58.5],[-158,58],[-158.5,57],[-157.5,56.5],[-154.5,56],[-152.5,56],[-151,56],[-152,58],[-155,59],[-156.5,59.5],[-158.5,60],[-160,60.5],[-162,61],[-163.5,62],[-165,63],[-166.5,64],[-168,65.5],[-166,66],[-163,66],[-161,65],[-158.5,64],[-156,63],[-154,62],[-152,61.5],[-150,61.5],[-148.5,61],[-146,61],[-144,60.5],[-142,60],[-140.5,59.5],[-138,58.5],[-137,57]]},
+    {name:'aleutians',points:[[-169,54],[-172,53.5],[-174,53],[-176,52.5],[-178,52.5],[-180,52],[-179,52.5],[-177,53],[-175,53],[-173,52.5],[-171,53],[-169,53.5],[-168,54]]},
+    // ── RUSSIA EAST ──
+    {name:'russia_e',points:[[180,69],[175,65],[170,61],[168,58],[165,59],[162,59],[160,55],[158,52],[156,50],[154,48],[152,47],[150,46],[148,45],[148,47],[150,49],[152,50],[154,52],[156,54],[158,57],[160,59],[162,59],[164,60],[166,60],[168,62],[170,63],[172,64],[176,65],[180,69]]},
+    {name:'kamchatka',points:[[163,57],[163,56],[163,55],[163,53],[161,52],[159,52],[158,52],[159,55],[160,57],[161,57],[162,57],[163,57]]},
+    {name:'sakhalin',points:[[141,47],[142,48],[142.5,49],[143,50.5],[143,52],[142,52],[141.5,51],[140.5,50],[140,49],[141,48],[141,47]]},
+    // ── JAPAN ──
+    {name:'honshu',points:[[130.5,31.5],[131,32.5],[131.5,33.3],[132.5,33.9],[133,34],[133.5,34.2],[134,34.5],[134.5,34.5],[135,34.4],[135.5,34.5],[136,35],[136.5,35.5],[137,35.2],[137.5,35],[138,35.2],[138.5,36],[139,36.5],[139.5,37],[140,38],[140.5,39],[141,40],[141.5,40.5],[141.8,41.5],[141,42],[140,41.5],[139.5,40.5],[138.5,39],[137.5,37],[136.5,36],[135.5,35],[135,34.8],[134,34.2],[133,33.8],[132,33.5],[131.5,33],[131,32.3],[130.5,31.5]]},
+    {name:'hokkaido',points:[[141,41.5],[141.5,42],[141.5,43],[142,43.5],[143,43.5],[144,44.2],[144.5,44],[145,43.5],[145,43],[144.5,42.5],[143.5,42],[142.5,42],[141.5,42],[140.5,41.5],[141,41.5]]},
+    {name:'kyushu',points:[[130,32],[130.5,32.5],[131,33],[130.5,33.5],[130,33.5],[129.5,33],[129.5,33.8],[130,33.5],[130.5,33.2],[131,33],[130.5,32.5],[130,32]]},
+    {name:'shikoku',points:[[132.5,34],[133,34.2],[133.5,34.2],[134,34.3],[134.5,34],[134.5,33.5],[134,33.3],[133.5,33.2],[133,33.3],[132.5,33.5],[132.5,34]]},
+    // ── KOREA (N + S peninsula) ──
+    {name:'korea',points:[[124,40.5],[125,40.5],[127,40.5],[129,41],[130,42.5],[130,43],[129.5,42.5],[129.5,41],[129.5,39],[129.5,38],[129.5,36],[129.5,35.5],[128.5,35],[127.5,34.8],[127,34.5],[126.5,34.8],[126,35],[125.5,35.5],[125,36.5],[124.5,37],[124.5,38],[125,39],[125,40],[124,40.5]]},
+    // ── CHINA ──
+    {name:'china',points:[[134,47.5],[131.5,47.5],[130,48],[124,44],[121,39],[120,38],[119,36],[119.5,33],[121.5,31.5],[121,30],[120.5,28.5],[120,27],[119,26],[117,24],[115,22.5],[113,22],[111,21],[110,20.5],[109,20],[108,20],[107,21],[106,21.5],[105,22],[103,22.5],[101,22],[100,22],[99,22],[97.5,22],[97,24],[97,27],[97.5,28],[98,29],[97,31],[93,33.5],[91,32],[89,32],[87,32],[84,31],[82,32],[80,32],[78,35],[77,37],[75,39],[76,41],[80,45],[82,47],[84,48],[87,49],[90,49],[93,50],[97,50],[100,50],[103,50],[107,50.5],[110,49.5],[113,50],[116,50],[118,50],[120,49],[121,48.5],[123,48],[126,44],[128,44],[130,47],[132,47.5],[134,47.5]]},
+    {name:'taiwan',points:[[121,25],[121.5,24.5],[122,23.5],[121.8,22.5],[121,21.8],[120.5,22],[119.8,23.5],[120,24.5],[120.5,25],[121,25]]},
+    {name:'hainan',points:[[109,20],[110.5,20],[111.5,20.5],[111,19.5],[110.5,18.5],[109.5,18.5],[109,19.5],[109,20]]},
+    // ── MYANMAR ──
+    {name:'myanmar',points:[[92.5,27.5],[94,27.5],[95.5,27.5],[97.5,28],[98,27],[98.5,26],[98,24],[98,23],[99,22],[101,22],[101.5,21],[101.5,20],[101.5,19],[101,18],[100.5,17.5],[99.5,17],[99,16],[98.5,15],[98,14],[98.5,12.5],[99,12],[99,11],[98.5,10.5],[98,11],[97.5,11.5],[97.5,14],[97.5,16.5],[97.5,18],[97,18],[96.5,18],[95,19],[93,24],[92.5,27.5]]},
+    // ── THAILAND (main body + Kra Isthmus peninsula) ──
+    {name:'thailand',points:[[98,20],[98.5,20],[99,20.5],[100,20.5],[101,20.5],[101.5,21],[101.5,19.5],[101,18.5],[102.5,18],[103,18],[103.5,17.5],[104,16.5],[104.5,15.5],[105,15],[103,14],[103,13],[102.5,12.5],[102,12],[101,12.5],[100.5,13],[100,13],[100,12.5],[99.5,12],[99,11],[99,10],[99.5,9],[100.5,8.5],[101,7],[101.5,6],[101.5,5.5],[101,5.5],[100.5,5.5],[100,5.5],[99.5,5.5],[99.5,6.5],[99,8],[98.5,9.5],[98.5,10.5],[98,11.5],[97.5,11.5],[97.5,13.5],[97.5,15],[97.5,16],[97.5,18],[98,18.5],[98,20]]},
+    // ── VIETNAM ──
+    {name:'vietnam',points:[[103,22.5],[104,22.5],[104.5,21],[105,21.5],[105.5,20.5],[106,20],[106.5,21],[107,21],[107.5,20],[108,18],[107,16],[108,14],[108.5,12.5],[107.5,11.5],[106.5,10.5],[106,10],[105,10],[104,10.5],[103,11],[102.5,11.5],[103,13],[103,14],[104,16],[103.5,17.5],[103,18],[102,18.5],[101.5,19],[101,19.5],[101,20],[100.5,20],[100,20.5],[101,21],[101.5,21.5],[102,21.5],[102.5,22],[103,22.5]]},
+    // ── LAOS ──
+    {name:'laos',points:[[100,22],[101.5,22],[102.5,22],[103,22.5],[103.5,21],[104.5,21],[104.5,18],[103.5,18],[103.5,17.5],[103,17],[103,15],[102.5,14.5],[102.5,15],[101.5,15],[101,16],[101,18],[101.5,19],[101,20],[100,21],[100,22]]},
+    // ── CAMBODIA ──
+    {name:'cambodia',points:[[102.5,14.5],[107,14],[107,12.5],[106.5,11.5],[105.5,10.5],[104,10.5],[103,11],[102.5,11.5],[102.5,12.5],[102.5,14.5]]},
+    // ── MALAY PENINSULA (W Malaysia + Thailand south tip) ──
+    {name:'malay_pen',points:[[101.5,6],[102,6.5],[102.5,7.5],[103,8.5],[103.5,9.5],[104,10],[103.5,10.5],[103,10],[102.5,9],[102,8],[101.5,7],[101,6.5],[100.5,6],[100,6],[100.5,5.5],[101,5.5],[101.5,6]]},
+    // ── PHILIPPINES ──
+    {name:'luzon',points:[[119.5,18],[120,18.5],[120.5,18.5],[121,18.5],[121.5,18],[122,17.5],[122.5,17],[122.5,16.5],[122.5,15.5],[122,15.5],[121.5,15.5],[121.5,14.5],[122,14],[122.5,13.5],[123,13.5],[123.5,13.5],[124,13],[124,12],[122.5,11.5],[122,12],[121,13],[121,14],[120.5,14.5],[121,16],[120.5,17],[120,17.5],[119.5,18]]},
+    {name:'visayas',points:[[121.5,11.5],[122.5,12],[123.5,12],[124,11],[124,10.5],[123,10.5],[122,11],[121.5,11.5]]},
+    {name:'mindanao',points:[[121.5,8],[122,8.5],[123,9],[124,9.5],[125,9.5],[126,9],[126.5,8.5],[126,7.5],[125.5,7],[125,7],[124.5,7],[123.5,7],[122.5,7.5],[121.5,7.5],[121.5,8]]},
+    // ── INDONESIA ──
+    {name:'sumatra',points:[[95.5,5.5],[96.5,5],[97.5,4.5],[98,3.5],[98.5,2.5],[99,1.5],[99.5,0.5],[100,-0.5],[101,-2],[102,-3.5],[103,-4.5],[104,-5],[105,-5.5],[106,-5.5],[105,-5],[104,-4],[103,-3],[102,-2.5],[101,-1.5],[100.5,-0.5],[100,0.5],[99.5,1.5],[99,2.5],[98.5,3.5],[98,4.5],[97.5,4.5],[96.5,4.5],[95.5,4.5],[95.5,5.5]]},
+    {name:'java',points:[[105,-5.5],[106,-6],[107,-6.5],[108,-7],[109,-7.5],[110,-7.5],[111,-7.5],[112,-7.5],[113,-7.5],[114,-8],[114.5,-8.5],[114,-8.5],[112,-8],[110,-8],[108,-7.5],[106.5,-7],[105.5,-6.5],[105,-5.5]]},
+    {name:'borneo',points:[[108,1.5],[109,3],[110,3.5],[111,4.5],[112,4.5],[113,5],[114,6],[115,6.5],[116,7],[117,7.5],[118,7],[118.5,6],[118,5],[117,4.5],[117.5,3],[117.5,1.5],[117.5,0.5],[116.5,-1],[115,-2.5],[114,-4],[113,-3.5],[112,-3],[111,-2],[110,-1.5],[109,-0.5],[108,0.5],[108,1.5]]},
+    {name:'sulawesi',points:[[121,1.5],[122,2],[123.5,2],[124,1.5],[124.5,0.5],[125,0.5],[125,-0.5],[124.5,-1],[123,-1.5],[122.5,-3.5],[122,-4.5],[121.5,-5],[121,-5],[121,-4.5],[120.5,-3],[120.5,-2],[120,-1],[120,0.5],[121,1.5]]},
+    {name:'new_guinea',points:[[131,-2],[133,-3],[134,-4],[135,-5],[136,-5.5],[137,-6],[138,-6.5],[139,-7],[140,-7.5],[141,-7.5],[143,-8],[145,-7],[147,-7.5],[148,-8],[148.5,-8.5],[147.5,-9],[146,-8.5],[144,-8.5],[142,-8.5],[140,-8],[138,-7.5],[136,-6.5],[134,-5.5],[132.5,-4.5],[131.5,-3],[131,-2]]},
+    // ── AUSTRALIA ──
+    {name:'australia',points:[[114,-22],[113,-25],[113,-28],[113,-30],[114,-32],[115,-34],[117,-35.5],[120,-35],[124,-34],[128,-33.5],[131,-32],[133,-32],[135,-35],[136,-36],[138,-38],[141,-38.5],[145,-38.5],[149,-38],[151,-34],[152.5,-27.5],[153.5,-28.5],[153,-25],[151,-22],[148,-20],[146,-18],[144,-14],[143,-10.8],[142,-11],[141,-14],[139,-16.5],[137,-14],[136,-12],[134,-12],[132,-12],[131,-12],[130.5,-12.5],[128,-14],[126,-15],[124,-17],[122,-18],[120,-18],[118,-18],[116,-21],[114,-22]]},
+    // ── NEW ZEALAND ──
+    {name:'nz_north',points:[[172,-37],[174,-36],[175.5,-37],[176.5,-38.5],[177,-39],[178.5,-38.5],[178,-37],[177,-36.5],[175,-36],[173,-37],[172,-37]]},
+    {name:'nz_south',points:[[166.5,-46],[167,-45],[167.5,-44],[168,-44],[169,-44],[170,-43.5],[171,-43],[172,-42],[172,-41],[171,-40],[170.5,-43],[169.5,-44.5],[168.5,-45.5],[167.5,-46.5],[166.5,-46]]},
+    // ── INDIA ──
+    {name:'india',points:[[68,24],[70,22],[72,21],[73,19],[74,17],[75,15],[76,12],[77,9],[77.5,8],[79,9],[80,11],[80,14],[81,17],[82,19],[83,21],[84,22],[85,22],[86,23],[87,24],[88,26],[90,27],[91,27],[92,28],[89,30],[86,31],[84,30],[80,32],[77,33],[74,33],[70,33],[68,28],[68,24]]},
+    {name:'sri_lanka',points:[[80,9.8],[80.5,9.5],[81,9],[81.5,8.5],[81.5,7.5],[80.5,6],[79.5,6.5],[79.5,7.5],[80,8.5],[80,9.8]]},
+    // ── DESTINATION ISLANDS (Gulf of Thailand) ──
+    {name:'koh_phangan',dest:true,points:[
+      [99.94,10.13],[100.01,10.12],[100.07,10.06],[100.12,9.97],
+      [100.13,9.88],[100.09,9.80],[100.00,9.76],[99.91,9.78],
+      [99.85,9.86],[99.84,9.97],[99.89,10.07],[99.94,10.13]
+    ]},
+    {name:'koh_samui',dest:true,points:[
+      [99.91,9.61],[100.00,9.64],[100.12,9.62],[100.20,9.57],
+      [100.22,9.50],[100.17,9.41],[100.04,9.37],[99.90,9.40],
+      [99.85,9.48],[99.86,9.57],[99.91,9.61]
+    ]},
+  ];
+
+  /* ── ANIMATION STATE ── */
+  const state = {
+    phase: -1, t: 0,
+    speed: [0.0038, 0.0068, 0.012, 0.020],
+    activated: new Set(),
+    completedLegs: [],
+    trail: [],
+    pulses: [],
+    frame: 0,
+    pulseCounter: 0,
+    destFlashed: false,
+    destGoldExtra: 0,
+  };
+
+  /* ── MANUAL NAV STATE ── */
+  let currentWP = 0, manualMode = false;
+
+  /* ── BUILD ELEVATED ARC POINTS ── */
+  function buildArcPoints(legIdx, progress){
+    const leg = LEGS[legIdx];
+    const wp0 = WAYPOINTS[leg.from], wp1 = WAYPOINTS[leg.to];
+    const N = 80;
+    const steps = Math.ceil(progress * N);
+    const pts = [];
+    for(let i=0; i<=steps; i++){
+      const t = i / N;
+      const gc = greatCirclePoint(wp0.lat, wp0.lon, wp1.lat, wp1.lon, t);
+      // altitude peaks at t=0.5, using sine curve
+      const alt = leg.arcH * Math.sin(t * Math.PI);
+      const p = project(gc.lat, gc.lon, R + alt);
+      if(p) pts.push(p);
+      else pts.push(null);
+    }
+    return pts;
+  }
+
+  /* ── GHOST ROUTES — Full path preview (Google Maps style) ── */
+  function drawGhostRoutes(){
+    for(let li=0; li<LEGS.length; li++){
+      const leg=LEGS[li];
+      const wp0=WAYPOINTS[leg.from],wp1=WAYPOINTS[leg.to];
+      const N=60;
+      ctx.save();
+      ctx.setLineDash([6,5]);
+      ctx.strokeStyle=leg.color;
+      ctx.globalAlpha=0.14;
+      ctx.lineWidth=1.8;
+      ctx.beginPath();
+      let first=true;
+      for(let i=0;i<=N;i++){
+        const t=i/N;
+        const gc=greatCirclePoint(wp0.lat,wp0.lon,wp1.lat,wp1.lon,t);
+        const alt=leg.arcH*Math.sin(t*Math.PI);
+        const p=project(gc.lat,gc.lon,R+alt);
+        if(!p){first=true;continue;}
+        first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y); first=false;
+      }
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.restore();
+    }
+  }
+
+  /* ── STEP INDICATOR — Apple Maps / Google Maps directions card ── */
+  function drawStepIndicator(){
+    const allDone=state.completedLegs.length>=LEGS.length;
+    const phase=state.phase;
+    if(phase<0&&!allDone) return;
+
+    const infos=[
+      {icon:'✈',from:'Seattle',   to:'Taipei',       meta:'~11 hrs · EVA Air',          color:'#00c8ff'},
+      {icon:'✈',from:'Taipei',    to:'Bangkok',       meta:'~3.5 hrs · EVA Air',         color:'#00c8ff'},
+      {icon:'✈',from:'Bangkok',   to:'Koh Samui',    meta:'~1.5 hrs · Bangkok Airways',  color:'#00c8ff'},
+      {icon:'⛴',from:'Koh Samui',to:'Koh Phangan',  meta:'~30 min · Lomprayah Ferry',   color:'#00ffb3'},
+    ];
+
+    const x=14, y=14;
+
+    if(allDone){
+      const w=214,h=58;
+      ctx.save();
+      ctx.globalAlpha=0.96;
+      ctx.fillStyle='rgba(0,168,150,0.22)';
+      ctx.strokeStyle='rgba(0,212,170,0.55)';
+      ctx.lineWidth=1;
+      ctx.beginPath(); ctx.roundRect(x,y,w,h,10); ctx.fill(); ctx.stroke();
+      ctx.fillStyle='#00d4aa';
+      ctx.font='bold 11px "Plus Jakarta Sans",sans-serif';
+      ctx.textAlign='left'; ctx.shadowBlur=0;
+      ctx.fillText('🎯 Arrived: Koh Phangan!', x+12, y+22);
+      ctx.fillStyle='rgba(255,255,255,0.5)';
+      ctx.font='9px "Plus Jakarta Sans",sans-serif';
+      ctx.fillText('16,000 km · 4 flights · 1 ferry · Train hard 🥊', x+12, y+40);
+      ctx.restore();
+      return;
+    }
+
+    if(phase<0||phase>=LEGS.length) return;
+    const info=infos[phase];
+    const stepNum=phase+1;
+    const w=218,h=72;
+
+    ctx.save();
+    ctx.globalAlpha=0.96;
+    // Glass dark card
+    ctx.fillStyle='rgba(6,14,30,0.82)';
+    ctx.strokeStyle='rgba(255,255,255,0.13)';
+    ctx.lineWidth=1;
+    ctx.beginPath(); ctx.roundRect(x,y,w,h,11); ctx.fill(); ctx.stroke();
+
+    // Step label top-right
+    ctx.font='700 8px "Plus Jakarta Sans",sans-serif';
+    ctx.fillStyle='rgba(255,255,255,0.28)';
+    ctx.textAlign='right';
+    ctx.fillText(`STEP ${stepNum} OF 4`, x+w-12, y+16);
+
+    // Icon circle
+    ctx.fillStyle=info.color+'22';
+    ctx.strokeStyle=info.color;
+    ctx.lineWidth=1.3;
+    ctx.beginPath(); ctx.arc(x+24,y+33,13,0,Math.PI*2); ctx.fill(); ctx.stroke();
+    ctx.font='14px sans-serif'; ctx.fillStyle=info.color;
+    ctx.textAlign='center'; ctx.shadowBlur=0;
+    ctx.fillText(info.icon, x+24, y+38);
+
+    // Route text
+    ctx.textAlign='left';
+    ctx.font='bold 10.5px "Plus Jakarta Sans",sans-serif';
+    ctx.fillStyle='#fff';
+    ctx.fillText(`${info.from}  →  ${info.to}`, x+44, y+28);
+    ctx.font='9px "Plus Jakarta Sans",sans-serif';
+    ctx.fillStyle='rgba(255,255,255,0.45)';
+    ctx.fillText(info.meta, x+44, y+43);
+
+    // Progress bar
+    const bx=x+12,by=y+59,bw=w-24,bh=3;
+    ctx.fillStyle='rgba(255,255,255,0.09)';
+    ctx.beginPath(); ctx.roundRect(bx,by,bw,bh,2); ctx.fill();
+    ctx.fillStyle=info.color;
+    ctx.shadowBlur=6; ctx.shadowColor=info.color;
+    ctx.beginPath(); ctx.roundRect(bx,by,Math.max(6,bw*state.t),bh,2); ctx.fill();
+    ctx.shadowBlur=0;
+    ctx.restore();
+  }
+
+  /* ── DRAWING FUNCTIONS ── */
+
+  function drawGlobeBase(){
+    // Clip to circle for everything inside
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.clip();
+
+    // Deep space ocean gradient
+    const og = ctx.createRadialGradient(cx-R*0.1, cy-R*0.2, R*0.05, cx, cy, R);
+    og.addColorStop(0,   '#02081a');
+    og.addColorStop(0.4, '#010a1c');
+    og.addColorStop(0.75,'#010710');
+    og.addColorStop(1,   '#000508');
+    ctx.fillStyle = og; ctx.fillRect(cx-R,cy-R,R*2,R*2);
+    ctx.restore();
+  }
+
+  function drawGraticule(){
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.clip();
+    for(let lat=-75; lat<=75; lat+=15){
+      ctx.beginPath(); let first=true;
+      for(let lon=-180; lon<=180; lon+=3){
+        const p=project(lat,lon); if(!p){first=true;continue;}
+        first ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y); first=false;
+      }
+      ctx.strokeStyle = lat===0 ? 'rgba(0,160,220,0.12)' : 'rgba(0,120,180,0.05)';
+      ctx.lineWidth = lat===0 ? 0.8 : 0.4; ctx.stroke();
+    }
+    for(let lon=-180; lon<=180; lon+=15){
+      ctx.beginPath(); let first=true;
+      for(let lat=-85; lat<=85; lat+=3){
+        const p=project(lat,lon); if(!p){first=true;continue;}
+        first ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y); first=false;
+      }
+      ctx.strokeStyle='rgba(0,120,180,0.05)'; ctx.lineWidth=0.4; ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawLandmasses(){
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.clip();
+    for(const poly of LANDMASSES){
+      ctx.beginPath(); let first=true;
+      for(const [lon,lat] of poly.points){
+        const p=project(lat,lon); if(!p){first=true;continue;}
+        first ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y); first=false;
+      }
+      ctx.closePath();
+      // Destination islands glow gold-teal; other land standard blue
+      if(poly.dest){
+        ctx.fillStyle   = 'rgba(0,168,150,0.35)';
+        ctx.strokeStyle = 'rgba(0,220,200,0.90)';
+        ctx.lineWidth   = 1.5;
+        ctx.shadowBlur  = 8;
+        ctx.shadowColor = 'rgba(0,220,200,0.6)';
+      } else {
+        ctx.fillStyle   = 'rgba(30,62,92,1.0)';
+        ctx.strokeStyle = 'rgba(65,130,175,0.60)';
+        ctx.lineWidth   = 0.9;
+        ctx.shadowBlur  = 0;
+      }
+      ctx.fill(); ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
+    ctx.restore();
+  }
+
+  function drawAtmosphere(){
+    // Edge glow — rendered OUTSIDE the clip so it bleeds beyond the circle
+    // Inner atmosphere (inside globe)
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.clip();
+    const inner = ctx.createRadialGradient(cx,cy,R*0.72, cx,cy,R);
+    inner.addColorStop(0,'transparent');
+    inner.addColorStop(0.6,'rgba(0,80,180,0.04)');
+    inner.addColorStop(1,'rgba(0,140,255,0.18)');
+    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2);
+    ctx.fillStyle=inner; ctx.fill();
+    ctx.restore();
+
+    // Outer atmospheric halo (outside the globe surface)
+    const outer = ctx.createRadialGradient(cx,cy,R*0.94, cx,cy,R*1.12);
+    outer.addColorStop(0,'rgba(0,120,255,0.22)');
+    outer.addColorStop(0.5,'rgba(0,80,200,0.10)');
+    outer.addColorStop(1,'rgba(0,40,120,0)');
+    ctx.beginPath(); ctx.arc(cx,cy,R*1.12,0,Math.PI*2);
+    ctx.fillStyle=outer; ctx.fill();
+
+    // Crisp rim line
+    ctx.save();
+    ctx.shadowBlur=18; ctx.shadowColor='rgba(60,160,255,0.7)';
+    ctx.strokeStyle='rgba(80,180,255,0.35)'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawCompletedArc(legIdx){
+    const pts = buildArcPoints(legIdx, 1);
+    const color = LEGS[legIdx].color;
+    if(pts.length < 2) return;
+    ctx.save();
+    // Glow pass
+    ctx.shadowBlur=12; ctx.shadowColor=color;
+    ctx.strokeStyle=color; ctx.lineWidth=1.8; ctx.globalAlpha=0.35;
+    ctx.beginPath(); let first=true;
+    for(const p of pts){ if(!p){first=true;continue;} first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y); first=false; }
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawActiveArc(legIdx, progress){
+    const pts = buildArcPoints(legIdx, progress);
+    const color = LEGS[legIdx].color;
+    if(pts.length < 2) return;
+
+    // Track trail
+    const lastP = pts[pts.length-1];
+    if(lastP){ state.trail.push({x:lastP.x, y:lastP.y, a:1.0, color}); if(state.trail.length>24) state.trail.shift(); }
+
+    ctx.save();
+    // Wide outer glow (Apple Maps-style thick route)
+    ctx.shadowBlur=28; ctx.shadowColor=color;
+    ctx.strokeStyle=color+'55'; ctx.lineWidth=7; ctx.globalAlpha=0.42;
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.beginPath(); let first=true;
+    for(const p of pts){ if(!p){first=true;continue;} first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y); first=false; }
+    ctx.stroke();
+    // Core bright line
+    ctx.shadowBlur=10; ctx.shadowColor=color;
+    ctx.strokeStyle=color; ctx.lineWidth=2.4; ctx.globalAlpha=1;
+    ctx.beginPath(); first=true;
+    for(const p of pts){ if(!p){first=true;continue;} first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y); first=false; }
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawVehicle(legIdx, progress){
+    const pts = buildArcPoints(legIdx, progress);
+    if(pts.length < 2) return;
+    const p = pts[pts.length-1];
+    const prev = pts[Math.max(0,pts.length-3)];
+    if(!p||!prev) return;
+
+    const angle = Math.atan2(p.y-prev.y, p.x-prev.x);
+    const color = LEGS[legIdx].color;
+    const isFerry = LEGS[legIdx].type==='ferry';
+
+    // Exhaust trail
+    for(let i=0;i<state.trail.length;i++){
+      const tr = state.trail[i];
+      const a  = (i/state.trail.length)*0.5;
+      const r  = (i/state.trail.length)*3;
+      ctx.beginPath(); ctx.arc(tr.x,tr.y,r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(0,200,255,${a})`; ctx.fill();
+    }
+
+    // Vehicle icon
+    ctx.save();
+    ctx.translate(p.x, p.y); ctx.rotate(angle);
+    ctx.shadowBlur=14; ctx.shadowColor=color;
+    ctx.fillStyle=color;
+    if(isFerry){
+      // Boat hull — top-down, bow pointing right
+      ctx.beginPath();
+      ctx.moveTo(12,0); ctx.bezierCurveTo(8,-4,0,-5,-8,-5);
+      ctx.lineTo(-12,-3); ctx.lineTo(-12,3); ctx.lineTo(-8,5);
+      ctx.bezierCurveTo(0,5,8,4,12,0); ctx.closePath(); ctx.fill();
+      ctx.save(); ctx.fillStyle='rgba(0,0,0,0.28)';
+      ctx.beginPath(); ctx.roundRect(-5,-2.5,7,5,1); ctx.fill(); ctx.restore();
+      ctx.fillRect(0,-1,1.5,5);
+    } else {
+      // Plane silhouette — top-down, nose pointing right
+      ctx.beginPath(); ctx.moveTo(15,0);
+      ctx.bezierCurveTo(10,-1.5,-4,-2,-13,-2);
+      ctx.lineTo(-16,-0.5); ctx.lineTo(-16,0.5);
+      ctx.lineTo(-13,2); ctx.bezierCurveTo(-4,2,10,1.5,15,0); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(3,-1); ctx.lineTo(-2,-11); ctx.lineTo(-8,-12); ctx.lineTo(-10,-9); ctx.lineTo(-3,-2); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(3,1); ctx.lineTo(-2,11); ctx.lineTo(-8,12); ctx.lineTo(-10,9); ctx.lineTo(-3,2); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(-10,-1); ctx.lineTo(-15,-6); ctx.lineTo(-16,-4); ctx.lineTo(-12,-1); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(-11,-1); ctx.lineTo(-15,-4); ctx.lineTo(-16,-3); ctx.lineTo(-12,-1); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(-11,1); ctx.lineTo(-15,4); ctx.lineTo(-16,3); ctx.lineTo(-12,1); ctx.closePath(); ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  function drawPulses(){
+    for(let i=state.pulses.length-1; i>=0; i--){
+      const pu=state.pulses[i];
+      ctx.save();
+      ctx.beginPath(); ctx.arc(pu.x,pu.y,pu.r,0,Math.PI*2);
+      ctx.strokeStyle=pu.color; ctx.globalAlpha=pu.alpha;
+      ctx.lineWidth=1.2; ctx.shadowBlur=8; ctx.shadowColor=pu.color;
+      ctx.stroke(); ctx.restore();
+      pu.r += pu.dest?1.4:0.9;
+      pu.alpha -= pu.dest?0.014:0.010;
+      if(pu.alpha<=0) state.pulses.splice(i,1);
+    }
+  }
+
+  function spawnPulse(wpIdx){
+    const wp=WAYPOINTS[wpIdx];
+    const p=project(wp.lat,wp.lon); if(!p) return;
+    const color=wp.dest?'#ffd60a':'#00c8ff';
+    state.pulses.push({x:p.x,y:p.y,r:wp.dest?9:5,alpha:0.8,color,dest:!!wp.dest});
+    if(wp.dest) state.pulses.push({x:p.x,y:p.y,r:16,alpha:0.6,color,dest:true});
+  }
+
+  function activateWP(idx){
+    if(!state.activated.has(idx)){
+      state.activated.add(idx);
+      spawnPulse(idx);
+      // Zoom camera to this waypoint's target position on arrival
+      if(CAM_DURATIONS[idx]>0){
+        const t=CAM_TARGETS[idx];
+        setCameraTarget(t.R, t.lat, t.lon, CAM_DURATIONS[idx]);
+      }
+      if(!manualMode){ currentWP=idx; updateNavButtons(); }
+      if(idx===4&&!state.destFlashed){
+        state.destFlashed=true;
+        state.destGoldExtra=40;
+        const ov=document.getElementById('flash-overlay');
+        if(ov){ov.style.opacity='0.18'; setTimeout(()=>ov.style.opacity='0',350);}
+      }
+    }
+  }
+
+  function drawWaypoints(){
+    for(const idx of state.activated){
+      const wp=WAYPOINTS[idx];
+      const p=project(wp.lat,wp.lon); if(!p) continue;
+      const color=wp.dest?'#ffd60a':'#00c8ff';
+      const size=wp.dest?7:4;
+
+      ctx.save();
+      ctx.shadowBlur=wp.dest?24:12; ctx.shadowColor=color;
+      ctx.beginPath(); ctx.arc(p.x,p.y,size,0,Math.PI*2);
+      ctx.fillStyle=color; ctx.fill();
+
+      // Label above the dot
+      ctx.font=`bold 9px 'Plus Jakarta Sans',sans-serif`;
+      ctx.fillStyle=color; ctx.textAlign='center';
+      ctx.shadowBlur=6; ctx.shadowColor=color;
+      if(wp.dest){
+        ctx.fillText('KOH PHANGAN \u2605', p.x, p.y-(size+14));
+        ctx.fillText(wp.code, p.x, p.y-(size+4));
+      } else {
+        ctx.fillText(wp.code, p.x, p.y-(size+7));
+      }
+      ctx.restore();
+    }
+  }
+
+  function drawJourneyLabel(){
+    const allDone = state.completedLegs.length >= LEGS.length;
+    const text = allDone
+      ? 'Seattle \u2192 Taipei \u2192 Bangkok \u2192 Koh Samui \u2192 Koh Phangan \uD83C\uDFAF'
+      : (state.phase>=0 ? 'Journey in progress...' : '');
+    if(!text) return;
+    ctx.save();
+    ctx.font = `600 11px 'Plus Jakarta Sans',sans-serif`;
+    ctx.fillStyle = allDone ? '#ffd60a' : 'rgba(0,200,255,0.7)';
+    ctx.textAlign = 'center';
+    ctx.shadowBlur = 6; ctx.shadowColor = allDone ? '#ffd60a' : '#00c8ff';
+    ctx.fillText(text, cx, cy+R-14);
+    ctx.restore();
+  }
+
+  /* ── MANUAL WAYPOINT NAVIGATION ── */
+  function updateNavButtons(){
+    const prevBtn=document.getElementById('nav-prev');
+    const nextBtn=document.getElementById('nav-next');
+    if(prevBtn) prevBtn.disabled=(currentWP<=0);
+    if(nextBtn) nextBtn.disabled=(currentWP>=WAYPOINTS.length-1);
+  }
+
+  function jumpToWaypoint(idx){
+    idx=Math.max(0,Math.min(WAYPOINTS.length-1,idx));
+    manualMode=true;
+    currentWP=idx;
+    // Reset animation state for manual view
+    state.t=0; state.trail=[]; state.pulses=[];
+    state.frame=0; state.pulseCounter=0;
+    state.destFlashed=(idx===4);
+    state.destGoldExtra=(idx===4)?30:0;
+    // Mark completed legs
+    state.completedLegs=[];
+    for(let i=0;i<idx;i++) state.completedLegs.push(i);
+    // Freeze auto-advance
+    state.phase=LEGS.length;
+    // Activate waypoints 0..idx
+    state.activated=new Set();
+    for(let i=0;i<=idx;i++) state.activated.add(i);
+    // Leg chips
+    document.querySelectorAll('.leg-chip').forEach((c,li)=>{
+      c.classList.toggle('active',LEGS[li].to<=idx);
+    });
+    // Destination flash
+    if(idx===4){
+      const ov=document.getElementById('flash-overlay');
+      if(ov){ov.style.opacity='0.18';setTimeout(()=>ov.style.opacity='0',350);}
+    }
+    // Snap camera (fast tween)
+    const t=CAM_TARGETS[idx];
+    setCameraTarget(t.R,t.lat,t.lon,50);
+    // Pulse + tooltip
+    state.activated.forEach(i=>spawnPulse(i));
+    showTooltip(idx);
+    updateNavButtons();
+  }
+
+  /* ── TOOLTIP ── */
+    const OUTBOUND_LABELS=[
+    {transport:'✈ Departure',duration:'Starting point'},
+    {transport:'✈ Layover — EVA Air',duration:'~11 hrs from Seattle'},
+    {transport:'✈ Connecting Flight',duration:'~3.5 hrs from Taipei'},
+    {transport:'✈ Domestic — Bangkok Airways',duration:'~1.5 hrs from Bangkok'},
+    {transport:'⛴ High-Speed Ferry',duration:'~30 min from Koh Samui'},
+  ];
+  const RETURN_LABELS=[
+    {transport:'⛴ Departure',duration:'Starting point'},
+    {transport:'✈ Domestic — Bangkok Airways',duration:'~30 min to Koh Samui'},
+    {transport:'✈ Connecting Flight',duration:'~1.5 hrs from Koh Samui'},
+    {transport:'✈ Layover — EVA Air',duration:'~3.5 hrs from Bangkok'},
+    {transport:'✈ Trans-Pacific — Home',duration:'~11 hrs from Taipei'},
+  ];
+  let STOP_LABELS = OUTBOUND_LABELS;
+  function showTooltip(wpIdx){
+    const wp=WAYPOINTS[wpIdx]; const lbl=STOP_LABELS[wpIdx];
+    const city=document.getElementById('tt-city');
+    const tr=document.getElementById('tt-transport');
+    const du=document.getElementById('tt-duration');
+    if(city) city.textContent=`${wp.name} (${wp.code})`;
+    if(tr)   tr.textContent=lbl.transport;
+    if(du)   du.textContent=lbl.duration;
+  }
+  function hideTooltip(){}
+
+  /* ── MAIN RENDER LOOP ── */
+  /* ── IN-FLIGHT CAMERA TRACKING ── */
+  // Lerps camera toward the plane's current position during approach/departure legs.
+  // Only runs when no hard camera transition is in progress (cam.p >= 0.88).
+  function tickFlightCamera(){
+    if(manualMode) return;
+    const ph=state.phase;
+    if(ph<0||ph>=LEGS.length) return;
+    if(cam.p<0.88) return; // don't fight active waypoint transitions
+
+    const leg=LEGS[ph];
+    const wp0=WAYPOINTS[leg.from], wp1=WAYPOINTS[leg.to];
+    const t=state.t;
+
+    // Look slightly ahead of current position for cinematic pull
+    const lookT=Math.min(t+0.15,1);
+    const pos=greatCirclePoint(wp0.lat,wp0.lon,wp1.lat,wp1.lon,lookT);
+
+    // Outbound: approach to Thailand — legs 2 (BKK→USM) and 3 (USM→KPH)
+    if(currentRouteMode==='outbound'&&(ph===2||ph===3)){
+      const fromCam=CAM_TARGETS[leg.from], toCam=CAM_TARGETS[leg.to];
+      // Leg 3 (ferry to KPH) zooms dramatically; leg 2 is gentler
+      const power=ph===3?0.7:0.5;
+      const zoomT=Math.pow(t,power);
+      const targetR=fromCam.R+(toCam.R-fromCam.R)*zoomT;
+      const lerpSpd=ph===3?0.022:0.010;  // leg 3 tracks faster
+      cam.R  +=( targetR -cam.R  )*lerpSpd;
+      cam.lat+=(pos.lat  -cam.lat)*lerpSpd*0.6;
+      cam.lon+=(pos.lon  -cam.lon)*lerpSpd*0.6;
+      // Keep transition-target in sync so activateWP's setCameraTarget
+      // starts from the mid-flight position rather than snapping
+      cam.sR=cam.R; cam.sLat=cam.lat; cam.sLon=cam.lon;
+      cam.p=1;
+      R=cam.R; lat0Cam=cam.lat; lon0Cam=cam.lon;
+    }
+
+    // Return: departure from KPH — legs 0 (KPH→USM) and 1 (USM→BKK)
+    if(currentRouteMode==='return'&&(ph===0||ph===1)){
+      const fromCam=CAM_TARGETS[leg.from], toCam=CAM_TARGETS[leg.to];
+      const power=ph===0?0.55:0.75;  // leg 0 pulls out fast from island level
+      const zoomT=Math.pow(t,power);
+      const targetR=fromCam.R+(toCam.R-fromCam.R)*zoomT;
+      const lerpSpd=ph===0?0.020:0.010;
+      cam.R  +=(targetR -cam.R  )*lerpSpd;
+      cam.lat+=(pos.lat -cam.lat)*lerpSpd*0.5;
+      cam.lon+=(pos.lon -cam.lon)*lerpSpd*0.5;
+      cam.sR=cam.R; cam.sLat=cam.lat; cam.sLon=cam.lon;
+      cam.p=1;
+      R=cam.R; lat0Cam=cam.lat; lon0Cam=cam.lon;
+    }
+  }
+
+  function render(){
+    ctx.clearRect(0,0,CW,CH);
+
+    updateCamera(); // smooth ease-in-out camera per waypoint
+    tickFlightCamera(); // in-flight camera tracking
+
+    drawGlobeBase();
+    drawGraticule();
+    drawLandmasses();
+    drawAtmosphere();
+
+    // Ghost routes — full route preview (Google Maps pre-draw)
+    drawGhostRoutes();
+
+    // Completed arcs
+    for(const li of state.completedLegs) drawCompletedArc(li);
+
+    // Active arc
+    if(state.phase>=0 && state.phase<LEGS.length){
+      drawActiveArc(state.phase, state.t);
+      drawVehicle(state.phase, state.t);
+    }
+
+    drawPulses();
+
+    // Spawn pulses periodically for activated waypoints
+    state.pulseCounter++;
+    if(state.pulseCounter%90===0) state.activated.forEach(i=>spawnPulse(i));
+    if(state.destGoldExtra>0 && state.frame%6===0){ spawnPulse(4); state.destGoldExtra--; }
+
+    drawWaypoints();
+    drawJourneyLabel();
+    drawStepIndicator();
+
+    state.frame++;
+
+    // Advance state
+    if(state.phase>=0 && state.phase<LEGS.length){
+      state.t += state.speed[state.phase];
+      if(state.t>=1){
+        state.completedLegs.push(state.phase);
+        state.trail=[];
+        activateWP(LEGS[state.phase].to);
+        const chip=document.getElementById(LEGS[state.phase].chipId);
+        if(chip) chip.classList.add('active');
+        state.phase++;
+        state.t=0;
+        if(state.phase>=LEGS.length) document.querySelectorAll('.leg-chip').forEach(c=>c.classList.add('active'));
+      } else {
+        activateWP(LEGS[state.phase].from);
+        if(state.t>0.92) activateWP(LEGS[state.phase].to);
+      }
+      // Show tooltip for leading waypoint
+      if(!manualMode&&state.phase<LEGS.length){
+        showTooltip(state.t>0.55?LEGS[state.phase].to:LEGS[state.phase].from);
+      }
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  // Kick off immediately
+  setTimeout(()=>{ state.phase=0; state.t=0; activateWP(0); }, 80);
+  requestAnimationFrame(render);
+
+  /* ── ROUTE SWITCHING ── */
+  let currentRouteMode = 'outbound';
+  function resetGlobeState(){
+    manualMode=false; currentWP=0; updateNavButtons();
+    state.phase=-1; state.t=0; state.activated=new Set();
+    state.completedLegs=[]; state.trail=[]; state.pulses=[];
+    state.destFlashed=false; state.destGoldExtra=0;
+    state.frame=0; state.pulseCounter=0;
+    resetCamera();
+    document.querySelectorAll('.leg-chip').forEach(c=>c.classList.remove('active'));
+    const ov=document.getElementById('flash-overlay'); if(ov) ov.style.opacity='0';
+  }
+  function switchGlobeRoute(mode){
+    if(mode===currentRouteMode) return;
+    currentRouteMode=mode;
+    // Swap active arrays
+    WAYPOINTS    = mode==='return' ? RETURN_WP    : OUTBOUND_WP;
+    LEGS         = mode==='return' ? RETURN_LEGS  : OUTBOUND_LEGS;
+    CAM_TARGETS  = mode==='return' ? RETURN_CAM   : OUTBOUND_CAM;
+    CAM_DURATIONS= mode==='return' ? RETURN_DUR   : OUTBOUND_DUR;
+    STOP_LABELS  = mode==='return' ? RETURN_LABELS: OUTBOUND_LABELS;
+    // Update chip labels
+    const chipLabels = mode==='return'
+      ? ['⛴ KPH → USM · ~30 min','✈ USM → BKK · ~1.5 hrs','✈ BKK → TPE · ~3.5 hrs','✈ TPE → SEA · ~11 hrs']
+      : ['✈ SEA → TPE · ~11 hrs','✈ TPE → BKK · ~3.5 hrs','✈ BKK → USM · ~1.5 hrs','⛴ USM → KPH · ~30 min'];
+    for(let i=0;i<4;i++){
+      const c=document.getElementById('chip-'+i);
+      if(c) c.textContent=chipLabels[i];
+    }
+    // Update toggle button states
+    document.getElementById('route-outbound').classList.toggle('active',mode==='outbound');
+    document.getElementById('route-return').classList.toggle('active',mode==='return');
+    // Reset and restart animation
+    resetGlobeState();
+    // For return mode: camera must start zoomed in at KPH, not the default Pacific view
+    if(mode==='return'){
+      const kph=RETURN_CAM[0];
+      cam.R=kph.R; cam.lat=kph.lat; cam.lon=kph.lon;
+      cam.sR=kph.R; cam.sLat=kph.lat; cam.sLon=kph.lon;
+      cam.tR=kph.R; cam.tLat=kph.lat; cam.tLon=kph.lon;
+      cam.p=1;
+      R=kph.R; lat0Cam=kph.lat; lon0Cam=kph.lon;
+    }
+    showTooltip(0);
+    setTimeout(()=>{ state.phase=0; state.t=0; activateWP(0); },160);
+  }
+  function switchJourneyTab(tab){
+    document.querySelectorAll('.journey-tab-content').forEach(el=>el.classList.remove('active'));
+    document.querySelectorAll('.journey-tab-btn').forEach(el=>el.classList.remove('active'));
+    document.getElementById('journey-'+tab).classList.add('active');
+    document.getElementById('jtab-'+tab).classList.add('active');
+    // Sync globe
+    switchGlobeRoute(tab);
+  }
+
+  // Replay — also reset camera
+  document.getElementById('replay-btn').addEventListener('click',()=>{
+    manualMode=false; currentWP=0; updateNavButtons();
+    state.phase=-1; state.t=0; state.activated=new Set();
+    state.completedLegs=[]; state.trail=[]; state.pulses=[];
+    state.destFlashed=false; state.destGoldExtra=0;
+    state.frame=0; state.pulseCounter=0;
+    // Reset animated camera system
+    resetCamera();
+    document.querySelectorAll('.leg-chip').forEach(c=>c.classList.remove('active'));
+    showTooltip(0);
+    const ov=document.getElementById('flash-overlay'); if(ov) ov.style.opacity='0';
+    setTimeout(()=>{ state.phase=0; state.t=0; activateWP(0); },160);
+  });
+
+  // Globe nav arrow buttons
+  document.getElementById('nav-prev').addEventListener('click',()=>{
+    if(currentWP>0) jumpToWaypoint(currentWP-1);
+  });
+  document.getElementById('nav-next').addEventListener('click',()=>{
+    if(currentWP<WAYPOINTS.length-1) jumpToWaypoint(currentWP+1);
+  });
+
+  // Keyboard arrow keys (only when not focused on inputs)
+  document.addEventListener('keydown',(e)=>{
+    const tag=(document.activeElement||{}).tagName||'';
+    if(/^(INPUT|TEXTAREA|SELECT)$/i.test(tag)) return;
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'){
+      e.preventDefault();
+      if(currentWP<WAYPOINTS.length-1) jumpToWaypoint(currentWP+1);
+    } else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){
+      e.preventDefault();
+      if(currentWP>0) jumpToWaypoint(currentWP-1);
+    }
+  });
+
+  // Expose route/tab switching to global scope (needed for onclick attributes)
+  window.switchGlobeRoute = switchGlobeRoute;
+  window.switchJourneyTab = switchJourneyTab;
+
+})();
+
+
+/* ===== ACCORDION ===== */
+function toggleAccordion(itemId){
+  const item=document.getElementById(itemId);
+  const header=item.querySelector('.accordion-header');
+  const isOpen=item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.accordion-item').forEach(i=>{
+    i.classList.remove('open');
+    i.querySelector('.accordion-header').classList.remove('open');
+  });
+  if(!isOpen){
+    item.classList.add('open');
+    header.classList.add('open');
+  }
+}
+
+/* ===== CHECKLIST ===== */
+const catCounts={docs:0,money:0,gear:0,health:0,packing:0};
+const catTotals={docs:3,money:4,gear:10,health:10,packing:8};
+let totalChecked=0;
+const TOTAL=35;
+
+function toggleCheck(item,cat,idx){
+  const wasChecked=item.classList.contains('checked');
+  item.classList.toggle('checked');
+  if(wasChecked){
+    catCounts[cat]--; totalChecked--;
+  } else {
+    catCounts[cat]++; totalChecked++;
+  }
+  // Category badge
+  const badge=document.getElementById('count-'+cat);
+  if(badge){
+    badge.textContent=`${catCounts[cat]} / ${catTotals[cat]}`;
+    badge.classList.toggle('done', catCounts[cat]===catTotals[cat]);
+  }
+  // Progress bar
+  const pct=Math.round((totalChecked/TOTAL)*100);
+  const fill=document.getElementById('progress-fill');
+  const pctEl=document.getElementById('progress-pct');
+  if(fill) fill.style.width=pct+'%';
+  if(pctEl) pctEl.textContent=`${totalChecked} / ${TOTAL}`;
+  // Completion message
+  const doneMsg=document.getElementById('progress-done-msg');
+  if(doneMsg) doneMsg.style.display=(totalChecked===TOTAL)?'block':'none';
+}
+
+/* ===== SCROLL REVEAL ===== */
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
